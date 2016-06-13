@@ -24,26 +24,13 @@
     <div class="col_12 center column ">
         <button class="small" onclick="$('#login').slideToggle();"><i class="fa fa-leaf "></i> 亲朋通道</button>
         <div class="hide" id="login">
-            <fieldset id="verify" class="col_6" style="height:150">
-                <legend>亲朋验证</legend>
-                <form id="formV" action="${ctx}/user/verify" method="post">
-                    <div id="questionDiv" class=" col_12 column "></div>
-                    <div class="col_12 column">
-                        <input name="answer" type="text" placeholder="请填写答案" class="required"/>
-                        <button type="submit" class="small column">提交</button>
-                    </div>
-                </form>
-            </fieldset>
-            <fieldset class="col_6" style="height:150">
-                <legend>后台管理</legend>
-                <form id="formL" action="${ctx}/user/login" method="post">
-                    <label class="inline">管理密码： </label>
-                    <div class="col_12 column">
-                        <input name="pwd" type="password" placeholder="请输入密码" class="required"/>
-                        <button type="submit" class="small column">提交</button>
-                    </div>
-                </form>
-            </fieldset>
+            <form id="formV" action="${ctx}/user/verify" method="post">
+                <div id="questionDiv" class=" col_12 column "></div>
+                <div class="col_12 column">
+                    <input name="answer" type="text" placeholder="请填写答案" class="required"/>
+                    <button type="submit" class="small column">提交</button>
+                </div>
+            </form>
         </div>
         <div class="col_12"><p>通过亲朋通道，您可以查看更多内容,或者上传自己喜欢的内容。</p></div>
     </div>

@@ -28,7 +28,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.7">
-      <module name="cms" target="1.5" />
+      <module name="cms" target="1.7" />
       <module name="data" target="1.5" />
       <module name="portal" target="1.7" />
       <module name="xiaochunjia" target="1.5" />
