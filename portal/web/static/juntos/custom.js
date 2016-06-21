@@ -81,3 +81,31 @@
 	  });
 	});
 })(jQuery);
+
+/* Main page isotope */
+function isotope() {
+	var container = $('#portfolio-one');
+	var item = $('#portfolio-one .element');
+	var columns;
+	var width;
+	columns = Math.ceil(container.width()/300);  // Number of columns
+	width = Math.floor(container.width()/columns); // Width for each item
+	item.each(function(){
+		$(this).css('width',width+'px'); // Setting width
+	});
+	container.imagesLoaded( function(){
+		container.isotope({    // Isotope
+			resizable: false,
+			masonry: {
+				columnWidth: width
+			}
+		});
+	});
+}
+
+$(document).ready(function(){
+	isotope(); // Initilize isotope 
+	$(window).smartresize(function(){
+		isotope(); // Call isotope when resize
+	});
+});

@@ -105,6 +105,8 @@
     <script src="${ctx}/static/juntos/html5shiv.js"></script>
     <script src="${ctx}/static/juntos/respond.min.js"></script>
     <![endif]-->
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon/favicon.png">
 </head>
 <!-- START BODY -->
 <body class="  pace-done">
@@ -126,13 +128,12 @@
                     <!-- MENU -->
                     <nav>
                         <ul id="menu">
-                            <li><a href="#home">家</a></li>
-                            <li><a href="#baby">亲子</a></li>
-                            <li><a href="#food">美食</a></li>
-                            <li><a href="#gallery">美景</a></li>
-                            <li><a href="#blog">饭碗</a></li>
-                            <li><a href="#about">关于</a></li>
-                            <li><a href="#donation" class="btn btn-success">Donation</a></li>
+                            <li><a href="#home">家</a></li><!--家庭图片；         轮播-->
+                            <li><a href="#baby">亲子</a></li><!--亲子游戏；       竖向列表，存色区域-->
+                            <li><a href="#food">美食</a></li><!--做过的菜，食谱；  竖向列表，存色区域-->
+                            <li><a href="#photo">摄影</a></li><!--拍过的照片；  图片画廊展示-->
+                            <li><a href="#blog">博客</a></li><!--技术博文纯文字；  竖向列表,白色-->
+                            <li><a href="#about">关于</a></li><!--成员简介；      横向列表-->
                         </ul>
                     </nav>
                 </div>
@@ -141,7 +142,7 @@
         <!-- END NAVIGATION -->
 
         <!-- START PROJECT SECTION -->
-        <section style="height: 947px;" id="home" class="section with-arrow">
+        <section id="home" style="height: 947px;" class="section ">
             <span style="display: inline;" class="sequence-prev"></span>
             <span style="display: inline;" class="sequence-next"></span>
             <ul class="sequence-canvas">
@@ -162,14 +163,15 @@
         <!-- END PROJECT SECTION -->
 
         <!-- START TEAM SECTION -->
-        <section id="baby" class="center section section-full-colored ">
+        <section id="baby" class="center section section-full-colored with-arrow">
             <!-- SECTION TITLE -->
             <div class="section-header ">
+                <br>
                 <h1>亲子</h1>
                 <hr>
             </div>
             <!-- SECTION CONTENT -->
-            <div class="section-content section-no-top-padding ">
+            <div class="section-content section-no-top-padding">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12">
@@ -198,427 +200,393 @@
         <!-- END TEAM SECTION -->
 
         <!-- START SERVICES SECTION -->
-        <section id="food" class="section with-arrow with-arrow">
+        <section id="food" class="center section ">
             <!-- SECTION TITLE -->
-            <div class="section-header ">
+            <div class="section-header with-arrow">
+                <br>
                 <h1>美食</h1>
                 <hr>
             </div>
             <!-- SECTION CONTENT -->
-            <div class="content-section">
-                <div id="gallery-slider">
-                    <div style="overflow: hidden; position: relative;" class="flex-viewport">
-                        <ul style="width: 1400%; transition-duration: 0s; transform: translate3d(-197px, 0px, 0px);"
-                            class="slides">
-                            <!-- SLIDE OF 2 GALLERY ITEMS -->
-                            <li style="width: 300px; float: left; display: block;">
-                                <!-- FIRST ITEM GALLERY -->
-                                <div class="gallery-item">
-                                    <a href="${ctx}/static/images/6.jpg"
-                                       data-fancybox-group="group1" class="fancybox">
-                                        <span>Image Title</span>
-                                        <img draggable="false"
-                                             src="${ctx}/static/images/6.jpg"
-                                             alt="Image gallery" height="200" width="300">
-                                    </a>
-                                </div>
-                                <!-- SECOND ITEM GALLERY -->
-                                <div class="gallery-item">
-                                    <a href="${ctx}/static/images/6.jpg"
-                                       data-fancybox-group="group1" class="fancybox">
-                                        <span>Image Title</span>
-                                        <img draggable="false"
-                                             src="${ctx}/static/images/6.jpg"
-                                             alt="Image gallery" height="200" width="300">
-                                    </a>
-                                </div>
-                            </li>
-                            <!-- END SLIDE -->
-                            <li style="width: 300px; float: left; display: block;">
-                                <div class="gallery-item">
-                                    <a href="${ctx}/static/images/6.jpg"
-                                       data-fancybox-group="group1" class="fancybox">
-                                        <span>Image Title</span>
-                                        <img draggable="false"
-                                             src="${ctx}/static/images/6.jpg"
-                                             alt="Image gallery" height="200" width="300">
-                                    </a>
-                                </div>
-                                <div class="gallery-item">
-                                    <a href="${ctx}/static/images/6.jpg"
-                                       data-fancybox-group="group1" class="fancybox">
-                                        <span>Image Title</span>
-                                        <img draggable="false"
-                                             src="${ctx}/static/images/6.jpg"
-                                             alt="Image gallery" height="200" width="300">
-                                    </a>
-                                </div>
-                            </li>
-                            <li style="width: 300px; float: left; display: block;">
-                                <div class="gallery-item">
-                                    <a href="${ctx}/static/images/6.jpg"
-                                       data-fancybox-group="group1" class="fancybox">
-                                        <span>Image Title</span>
-                                        <img draggable="false"
-                                             src="${ctx}/static/images/6.jpg"
-                                             alt="Image gallery" height="200" width="300">
-                                    </a>
-                                </div>
-                                <div class="gallery-item">
-                                    <a href="${ctx}/static/images/6.jpg"
-                                       data-fancybox-group="group1" class="fancybox">
-                                        <span>Image Title</span>
-                                        <img draggable="false"
-                                             src="${ctx}/static/images/6.jpg"
-                                             alt="Image gallery" height="200" width="300">
-                                    </a>
-                                </div>
-                            </li>
-                            <li style="width: 300px; float: left; display: block;">
-                                <div class="gallery-item">
-                                    <a href="${ctx}/static/images/6.jpg"
-                                       data-fancybox-group="group1" class="fancybox">
-                                        <span>Image Title</span>
-                                        <img draggable="false"
-                                             src="${ctx}/static/images/6.jpg"
-                                             alt="Image gallery" height="200" width="300">
-                                    </a>
-                                </div>
-                                <div class="gallery-item">
-                                    <a href="${ctx}/static/images/6.jpg"
-                                       data-fancybox-group="group1" class="fancybox">
-                                        <span>Image Title</span>
-                                        <img draggable="false"
-                                             src="${ctx}/static/images/6.jpg"
-                                             alt="Image gallery" height="200" width="300">
-                                    </a>
-                                </div>
-                            </li>
-                            <li style="width: 300px; float: left; display: block;">
-                                <div class="gallery-item">
-                                    <a href="${ctx}/static/images/6.jpg"
-                                       data-fancybox-group="group1" class="fancybox">
-                                        <span>Image Title</span>
-                                        <img draggable="false"
-                                             src="${ctx}/static/images/6.jpg"
-                                             alt="Image gallery" height="200" width="300">
-                                    </a>
-                                </div>
-                                <div class="gallery-item">
-                                    <a href="${ctx}/static/images/6.jpg"
-                                       data-fancybox-group="group1" class="fancybox">
-                                        <span>Image Title</span>
-                                        <img draggable="false"
-                                             src="${ctx}/static/images/6.jpg"
-                                             alt="Image gallery" height="200" width="300">
-                                    </a>
-                                </div>
-                            </li>
-                            <li style="width: 300px; float: left; display: block;">
-                                <div class="gallery-item">
-                                    <a href="${ctx}/static/images/6.jpg"
-                                       data-fancybox-group="group1" class="fancybox">
-                                        <span>Image Title</span>
-                                        <img draggable="false"
-                                             src="${ctx}/static/images/6.jpg"
-                                             alt="Image gallery" height="200" width="300">
-                                    </a>
-                                </div>
-                                <div class="gallery-item">
-                                    <a href="${ctx}/static/images/6.jpg"
-                                       data-fancybox-group="group1" class="fancybox">
-                                        <span>Image Title</span>
-                                        <img draggable="false"
-                                             src="${ctx}/static/images/6.jpg"
-                                             alt="Image gallery" height="200" width="300">
-                                    </a>
-                                </div>
-                            </li>
-                            <li style="width: 300px; float: left; display: block;">
-                                <div class="gallery-item">
-                                    <a href="${ctx}/static/images/6.jpg"
-                                       data-fancybox-group="group1" class="fancybox">
-                                        <span>Image Title</span>
-                                        <img draggable="false"
-                                             src="${ctx}/static/images/6.jpg"
-                                             alt="Image gallery" height="200" width="300">
-                                    </a>
-                                </div>
-                                <div class="gallery-item">
-                                    <a href="${ctx}/static/images/6.jpg"
-                                       data-fancybox-group="group1" class="fancybox">
-                                        <span>Image Title</span>
-                                        <img draggable="false"
-                                             src="${ctx}/static/images/6.jpg"
-                                             alt="Image gallery" height="200" width="300">
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
+            <div class="section-content section-no-top-padding with-arrow">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <img src="${ctx}/static/images/6.jpg"
+                                 class="pull-left img-thumbnail" alt="游戏图片">
+                            <h3>踩脚丫</h3>
+                            <p>内容描述 Few words about the creation, the ideas, biography of the funder...</p>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 top-margin">
+                            <img src="${ctx}/static/images/6.jpg"
+                                 class="pull-left img-thumbnail" alt="游戏图片">
+                            <h3>推小车</h3>
+                            <p>内容描述 Few words about the creation, the ideas, biography of the funder...</p>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 top-margin">
+                            <img src="${ctx}/static/images/6.jpg"
+                                 class="pull-left img-thumbnail" alt="游戏图片">
+                            <h3>扒尿炕</h3>
+                            <p>内容描述 Few words about the creation, the ideas, biography of the funder...</p>
+                        </div>
+                        <button type="button" class="btn btn-primary">更多</button>
                     </div>
-                    <ol class="flex-control-nav flex-control-paging">
-                        <li><a class="">1</a></li>
-                        <li><a class="flex-active">2</a></li>
-                    </ol>
-                    <ul class="flex-direction-nav">
-                        <li><a tabindex="-1" class="flex-prev" href="#">Previous</a></li>
-                        <li><a tabindex="-1" class="flex-next flex-disabled" href="#">Next</a></li>
-                    </ul>
                 </div>
             </div>
         </section>
         <!-- END SERVICES SECTION -->
 
         <!-- START GALLERY SECTION -->
-        <section id="gallery" class="section with-arrow">
+        <section id="photo" class="section with-arrow  section-full-colored ">
             <!-- SECTION TITLE -->
-            <div class="section-header ">
-                <h1>Gallery</h1>
+            <div class="section-header center">
+                <br>
+                <h1>摄影</h1>
                 <hr>
             </div>
             <!-- SECTION CONTENT -->
             <div class="section-content">
-                <div class="container">
-                    <div class="services-slider flexslider">
-                        <div style="overflow: hidden; position: relative;" class="flex-viewport">
-                            <ul style="width: 1000%; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);"
-                                class="slides">
-                                <!-- START SERVICE -->
-                                <li style="width: 254px; float: left; display: block;">
-                                    <div class="slide">
-                                        <span class="icon icon-large icon-glass"></span>
-                                        <h3>Reception</h3>
-                                        <p>Here it's just an example of the activities that you can do with your charity
-                                            to get funds. Or something else...</p>
-                                    </div>
-                                </li>
-                                <!-- END SERVICE -->
-                                <li style="width: 254px; float: left; display: block;">
-                                    <div class="slide">
-                                        <span class="icon icon-large icon-users2"></span>
-                                        <h3>Babysitting</h3>
-                                        <p>Here it's just an example of the activities that you can do with your charity
-                                            to get funds. Or something else...</p>
-                                    </div>
-                                </li>
-                                <li style="width: 254px; float: left; display: block;">
-                                    <div class="slide">
-                                        <span class="icon icon-large  icon-leaf"></span>
-                                        <h3>Gardening</h3>
-                                        <p>Here it's just an example of the activities that you can do with your charity
-                                            to get funds. Or something else...</p>
-                                    </div>
-                                </li>
-                                <li style="width: 254px; float: left; display: block;">
-                                    <div class="slide">
-                                        <span class="icon icon-large icon-gift"></span>
-                                        <h3>Gift Wrapping</h3>
-                                        <p>Here it's just an example of the activities that you can do with your charity
-                                            to get funds. Or something else...</p>
-                                    </div>
-                                </li>
-                                <li style="width: 254px; float: left; display: block;">
-                                    <div class="slide">
-                                        <span class="icon icon-large icon-coin"></span>
-                                        <h3>Sale</h3>
-                                        <p>Here it's just an example of the activities that you can do with your charity
-                                            to get funds. Or something else...</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <ol class="flex-control-nav flex-control-paging">
-                            <li><a class="flex-active">1</a></li>
-                            <li><a>2</a></li>
-                        </ol>
-                        <ul class="flex-direction-nav">
-                            <li><a tabindex="-1" class="flex-prev flex-disabled" href="#">Previous</a></li>
-                            <li><a class="flex-next" href="#">Next</a></li>
-                        </ul>
+                <div id="portfolio-one">
+                    <!-- Element -->
+                    <div class="element">
+                        <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/1.JPG">
+                            <!-- Image -->
+                            <img src="${ctx}/static/images/1.JPG" alt=""/>
+                            <!-- Content -->
+                           <span class="image-info">
+                            <!-- Title -->
+                              <span class="image-title">Hello how are you</span>
+                               <!-- Desc -->
+                              <span class="image-desc">Cras blandit, enim id mattis ultrices, erat dolor varius felis, quis consequat nibh ligula ut lectus</span>
+                           </span>
+                        </a>
                     </div>
-                    <!-- SECTION BUTTON -->
-                    <div class="center">
-                        <a href="#events" class="btn btn-default">Our Diary</a>
+                    <div class="element">
+                        <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/2.jpg">
+                            <!-- Image -->
+                            <img src="${ctx}/static/images/2.jpg" alt=""/>
+                            <!-- Content -->
+                           <span class="image-info">
+                            <!-- Title -->
+                              <span class="image-title">Hello how are you</span>
+                               <!-- Desc -->
+                              <span class="image-desc">Cras blandit, enim id mattis ultrices, erat dolor varius felis, quis consequat nibh ligula ut lectus</span>
+                           </span>
+                        </a>
                     </div>
+                    <div class="element">
+                        <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/3.jpg">
+                            <!-- Image -->
+                            <img src="${ctx}/static/images/3.jpg" alt=""/>
+                            <!-- Content -->
+                           <span class="image-info">
+                            <!-- Title -->
+                              <span class="image-title">Hello how are you</span>
+                               <!-- Desc -->
+                              <span class="image-desc">Cras blandit, enim id mattis ultrices, erat dolor varius felis, quis consequat nibh ligula ut lectus</span>
+                           </span>
+                        </a>
+                    </div>
+                    <div class="element">
+                        <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/4.JPG">
+                            <!-- Image -->
+                            <img src="${ctx}/static/images/4.JPG" alt=""/>
+                            <!-- Content -->
+                           <span class="image-info">
+                            <!-- Title -->
+                              <span class="image-title">Hello how are you</span>
+                               <!-- Desc -->
+                              <span class="image-desc">Cras blandit, enim id mattis ultrices, erat dolor varius felis, quis consequat nibh ligula ut lectus</span>
+                           </span>
+                        </a>
+                    </div>
+                    <div class="element">
+                        <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/5.jpg">
+                            <!-- Image -->
+                            <img src="${ctx}/static/images/5.jpg" alt=""/>
+                            <!-- Content -->
+                           <span class="image-info">
+                            <!-- Title -->
+                              <span class="image-title">Hello how are you</span>
+                               <!-- Desc -->
+                              <span class="image-desc">Cras blandit, enim id mattis ultrices, erat dolor varius felis, quis consequat nibh ligula ut lectus</span>
+                           </span>
+                        </a>
+                    </div>
+                    <div class="element">
+                        <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/1.JPG">
+                            <!-- Image -->
+                            <img src="${ctx}/static/images/1.JPG" alt=""/>
+                            <!-- Content -->
+                           <span class="image-info">
+                            <!-- Title -->
+                              <span class="image-title">Hello how are you</span>
+                               <!-- Desc -->
+                              <span class="image-desc">Cras blandit, enim id mattis ultrices, erat dolor varius felis, quis consequat nibh ligula ut lectus</span>
+                           </span>
+                        </a>
+                    </div>
+                    <div class="element">
+                        <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/2.jpg">
+                            <!-- Image -->
+                            <img src="${ctx}/static/images/2.jpg" alt=""/>
+                            <!-- Content -->
+                           <span class="image-info">
+                            <!-- Title -->
+                              <span class="image-title">Hello how are you</span>
+                               <!-- Desc -->
+                              <span class="image-desc">Cras blandit, enim id mattis ultrices, erat dolor varius felis, quis consequat nibh ligula ut lectus</span>
+                           </span>
+                        </a>
+                    </div>
+                    <div class="element">
+                        <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/3.jpg">
+                            <!-- Image -->
+                            <img src="${ctx}/static/images/3.jpg" alt=""/>
+                            <!-- Content -->
+                           <span class="image-info">
+                            <!-- Title -->
+                              <span class="image-title">Hello how are you</span>
+                               <!-- Desc -->
+                              <span class="image-desc">Cras blandit, enim id mattis ultrices, erat dolor varius felis, quis consequat nibh ligula ut lectus</span>
+                           </span>
+                        </a>
+                    </div>
+                    <div class="element">
+                        <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/4.JPG">
+                            <!-- Image -->
+                            <img src="${ctx}/static/images/4.JPG" alt=""/>
+                            <!-- Content -->
+                           <span class="image-info">
+                            <!-- Title -->
+                              <span class="image-title">Hello how are you</span>
+                               <!-- Desc -->
+                              <span class="image-desc">Cras blandit, enim id mattis ultrices, erat dolor varius felis, quis consequat nibh ligula ut lectus</span>
+                           </span>
+                        </a>
+                    </div>
+                    <div class="element">
+                        <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/5.jpg">
+                            <!-- Image -->
+                            <img src="${ctx}/static/images/5.jpg" alt=""/>
+                            <!-- Content -->
+                           <span class="image-info">
+                            <!-- Title -->
+                              <span class="image-title">Hello how are you</span>
+                               <!-- Desc -->
+                              <span class="image-desc">Cras blandit, enim id mattis ultrices, erat dolor varius felis, quis consequat nibh ligula ut lectus</span>
+                           </span>
+                        </a>
+                    </div>
+                    <div class="element">
+                        <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/1.JPG">
+                            <!-- Image -->
+                            <img src="${ctx}/static/images/1.JPG" alt=""/>
+                            <!-- Content -->
+                           <span class="image-info">
+                            <!-- Title -->
+                              <span class="image-title">Hello how are you</span>
+                               <!-- Desc -->
+                              <span class="image-desc">Cras blandit, enim id mattis ultrices, erat dolor varius felis, quis consequat nibh ligula ut lectus</span>
+                           </span>
+                        </a>
+                    </div>
+                    <div class="element">
+                        <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/2.jpg">
+                            <!-- Image -->
+                            <img src="${ctx}/static/images/2.jpg" alt=""/>
+                            <!-- Content -->
+                           <span class="image-info">
+                            <!-- Title -->
+                              <span class="image-title">Hello how are you</span>
+                               <!-- Desc -->
+                              <span class="image-desc">Cras blandit, enim id mattis ultrices, erat dolor varius felis, quis consequat nibh ligula ut lectus</span>
+                           </span>
+                        </a>
+                    </div>
+                    <div class="element">
+                        <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/3.jpg">
+                            <!-- Image -->
+                            <img src="${ctx}/static/images/3.jpg" alt=""/>
+                            <!-- Content -->
+                           <span class="image-info">
+                            <!-- Title -->
+                              <span class="image-title">Hello how are you</span>
+                               <!-- Desc -->
+                              <span class="image-desc">Cras blandit, enim id mattis ultrices, erat dolor varius felis, quis consequat nibh ligula ut lectus</span>
+                           </span>
+                        </a>
+                    </div>
+                    <div class="element">
+                        <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/4.JPG">
+                            <!-- Image -->
+                            <img src="${ctx}/static/images/4.JPG" alt=""/>
+                            <!-- Content -->
+                           <span class="image-info">
+                            <!-- Title -->
+                              <span class="image-title">Hello how are you</span>
+                               <!-- Desc -->
+                              <span class="image-desc">Cras blandit, enim id mattis ultrices, erat dolor varius felis, quis consequat nibh ligula ut lectus</span>
+                           </span>
+                        </a>
+                    </div>
+                    <div class="element">
+                        <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/5.jpg">
+                            <!-- Image -->
+                            <img src="${ctx}/static/images/5.jpg" alt=""/>
+                            <!-- Content -->
+                           <span class="image-info">
+                               <!-- Title -->
+                              <span class="image-title">Hello how are you</span>
+                               <!-- Desc -->
+                              <span class="image-desc">Cras blandit, enim id mattis ultrices, erat dolor varius felis, quis consequat nibh ligula ut lectus</span>
+                           </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="center" style="margin-top: 5px">
+                    <button type="button" class="btn btn-primary">更多</button>
                 </div>
             </div>
         </section>
         <!-- END GALLERY SECTION -->
 
         <!-- START BLOG SECTION -->
-        <section id="blog" class="section with-arrow section-content-colored">
+        <section id="blog" class="section " >
             <!-- SECTION TITLE -->
-            <div class="section-header with-arrow">
-                <h1>Latest Posts</h1>
+            <div class="section-content center ">
+                <h1>最新博文</h1>
                 <hr>
             </div>
             <!-- SECTION CONTENT -->
-            <div class="section-content">
+            <div class="section-content ">
                 <div class="container">
-                    <div class="flexslider posts-slider">
-
-                        <div style="overflow: hidden; position: relative;" class="flex-viewport">
-                            <ul style="width: 800%; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);"
-                                class="slides">
-                                <!-- START BLOG POST -->
-                                <li style="width: 340px; float: left; display: block;">
-                                    <div class="slide">
-                                        <div class="post post-normal">
-                                            <!-- FEATURED IMAGE -->
-                                            <div class="post-header">
-                                                <a href="http://2f-design.fr/juntos/demo/single-blog.html">
-                                                    <img draggable="false"
-                                                         src="Juntos%20-%20Charity%20&amp;%20Association%20Template_files/1.jpg"
-                                                         alt="Blog cover">
-                                                </a>
-                                            </div>
-                                            <div class="post-content">
-                                                <!-- TITLE -->
-                                                <h3>Post Title</h3>
-                                                <!-- DATE -->
-                                                <div class="post-data">
-                                                    <p><span class="icon icon-clock"></span> December 25, 2013</p>
-                                                </div>
-                                                <!-- CONTENT -->
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec
-                                                    placerat sem.
-                                                    Vestibulum vel tristique purus. In hac habitasse platea dictumst.
-                                                    Suspendisse eget pellentesque dui...</p>
-                                                <div class="center">
-                                                    <a href="http://2f-design.fr/juntos/demo/single-blog.html"
-                                                       class="btn btn-default">Read More</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <!-- END BLOG POST -->
-                                <li style="width: 340px; float: left; display: block;">
-                                    <div class="slide">
-                                        <div class="post post-normal">
-                                            <div class="post-header">
-                                                <a href="http://2f-design.fr/juntos/demo/single-blog.html">
-                                                    <img draggable="false"
-                                                         src="Juntos%20-%20Charity%20&amp;%20Association%20Template_files/2_002.jpg"
-                                                         alt="Blog cover">
-                                                </a>
-                                            </div>
-                                            <div class="post-content">
-                                                <h3>Post Title</h3>
-                                                <div class="post-data">
-                                                    <p><span class="icon icon-clock"></span> January 2, 2014</p>
-                                                </div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec
-                                                    placerat sem.
-                                                    Vestibulum vel tristique purus. In hac habitasse platea dictumst.
-                                                    Suspendisse eget pellentesque dui...</p>
-                                                <div class="center">
-                                                    <a href="http://2f-design.fr/juntos/demo/single-blog.html"
-                                                       class="btn btn-default">Read More</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li style="width: 340px; float: left; display: block;">
-                                    <div class="slide">
-                                        <div class="post post-normal">
-                                            <div class="post-header">
-                                                <a href="#">
-                                                    <img draggable="false"
-                                                         src="Juntos%20-%20Charity%20&amp;%20Association%20Template_files/3.jpg"
-                                                         alt="Blog cover">
-                                                </a>
-                                            </div>
-                                            <div class="post-content">
-                                                <h3>Post Title</h3>
-                                                <div class="post-data">
-                                                    <p><span class="icon icon-clock"></span> January 12, 2014</p>
-                                                </div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec
-                                                    placerat sem.
-                                                    Vestibulum vel tristique purus. In hac habitasse platea dictumst.
-                                                    Suspendisse eget pellentesque dui...</p>
-                                                <div class="center">
-                                                    <a href="http://2f-design.fr/juntos/demo/single-blog.html"
-                                                       class="btn btn-default">Read More</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li style="width: 340px; float: left; display: block;">
-                                    <div class="slide">
-                                        <div class="post post-normal">
-                                            <div class="post-header">
-                                                <a href="http://2f-design.fr/juntos/demo/single-blog.html">
-                                                    <img draggable="false"
-                                                         src="Juntos%20-%20Charity%20&amp;%20Association%20Template_files/4_003.jpg"
-                                                         alt="Blog cover">
-                                                </a>
-                                            </div>
-                                            <div class="post-content">
-                                                <h3>Post Title</h3>
-                                                <div class="post-data">
-                                                    <p><span class="icon icon-clock"></span> February 22, 2014</p>
-                                                </div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec
-                                                    placerat sem.
-                                                    Vestibulum vel tristique purus. In hac habitasse platea dictumst.
-                                                    Suspendisse eget pellentesque dui...</p>
-                                                <div class="center">
-                                                    <a href="http://2f-design.fr/juntos/demo/single-blog.html"
-                                                       class="btn btn-default">Read More</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <!-- LOAD MORE OPTION
-                                <li>
-                                    <div class="slide">
-                                        <div class="load-more">
-                                            <div class="content">
-                                                <a href="#" title="load more">
-                                                    <span class="icon icon-large icon-plus"></span>
-                                                    <h3>Load More Posts</h3>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                -->
-                            </ul>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-4 ">
+                            <div class="thumbnail" style="height: 336px;">
+                                <div class="caption">
+                                    <h3>
+                                        <a onclick="_hmt.push(['_trackEvent', 'tile', 'click', 'codeguide'])" target="_blank" title="Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。" href="http://codeguide.bootcss.com">
+                                            Bootstrap 编码规范
+                                            <br>
+                                            <small>by @mdo</small>
+                                        </a>
+                                    </h3>
+                                    <p> Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。 </p>
+                                </div>
+                            </div>
                         </div>
-                        <ol class="flex-control-nav flex-control-paging">
-                            <li><a class="flex-active">1</a></li>
-                            <li><a>2</a></li>
-                        </ol>
-                        <ul class="flex-direction-nav">
-                            <li><a tabindex="-1" class="flex-prev flex-disabled" href="#">Previous</a></li>
-                            <li><a class="flex-next" href="#">Next</a></li>
-                        </ul>
+                        <div class="col-sm-12 col-md-6 col-lg-4 ">
+                            <div class="thumbnail" style="height: 336px;">
+                                <div class="caption">
+                                    <h3>
+                                        <a onclick="_hmt.push(['_trackEvent', 'tile', 'click', 'codeguide'])" target="_blank" title="Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。" href="http://codeguide.bootcss.com">
+                                            Bootstrap 编码规范
+                                            <br>
+                                            <small>by @mdo</small>
+                                        </a>
+                                    </h3>
+                                    <p> Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。 </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-4 ">
+                            <div class="thumbnail" style="height: 336px;">
+                                <div class="caption">
+                                    <h3>
+                                        <a onclick="_hmt.push(['_trackEvent', 'tile', 'click', 'codeguide'])" target="_blank" title="Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。" href="http://codeguide.bootcss.com">
+                                            Bootstrap 编码规范
+                                            <br>
+                                            <small>by @mdo</small>
+                                        </a>
+                                    </h3>
+                                    <p> Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。 </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-4 ">
+                            <div class="thumbnail" style="height: 336px;">
+                                <div class="caption">
+                                    <h3>
+                                        <a onclick="_hmt.push(['_trackEvent', 'tile', 'click', 'codeguide'])" target="_blank" title="Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。" href="http://codeguide.bootcss.com">
+                                            Bootstrap 编码规范
+                                            <br>
+                                            <small>by @mdo</small>
+                                        </a>
+                                    </h3>
+                                    <p> Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。 </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-4 ">
+                            <div class="thumbnail" style="height: 336px;">
+                                <div class="caption">
+                                    <h3>
+                                        <a onclick="_hmt.push(['_trackEvent', 'tile', 'click', 'codeguide'])" target="_blank" title="Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。" href="http://codeguide.bootcss.com">
+                                            Bootstrap 编码规范
+                                            <br>
+                                            <small>by @mdo</small>
+                                        </a>
+                                    </h3>
+                                    <p> Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。 </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-4 ">
+                            <div class="thumbnail" style="height: 336px;">
+                                <div class="caption">
+                                    <h3>
+                                        <a onclick="_hmt.push(['_trackEvent', 'tile', 'click', 'codeguide'])" target="_blank" title="Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。" href="http://codeguide.bootcss.com">
+                                            Bootstrap 编码规范
+                                            <br>
+                                            <small>by @mdo</small>
+                                        </a>
+                                    </h3>
+                                    <p> Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。 </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-4 ">
+                            <div class="thumbnail" style="height: 336px;">
+                                <div class="caption">
+                                    <h3>
+                                        <a onclick="_hmt.push(['_trackEvent', 'tile', 'click', 'codeguide'])" target="_blank" title="Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。" href="http://codeguide.bootcss.com">
+                                            Bootstrap 编码规范
+                                            <br>
+                                            <small>by @mdo</small>
+                                        </a>
+                                    </h3>
+                                    <p> Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。 </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-4 ">
+                            <div class="thumbnail" style="height: 336px;">
+                                <div class="caption">
+                                    <h3>
+                                        <a onclick="_hmt.push(['_trackEvent', 'tile', 'click', 'codeguide'])" target="_blank" title="Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。" href="http://codeguide.bootcss.com">
+                                            Bootstrap 编码规范
+                                            <br>
+                                            <small>by @mdo</small>
+                                        </a>
+                                    </h3>
+                                    <p> Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。 </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="center ">
+                        <button type="button" class="btn btn-primary">更多</button>
                     </div>
                 </div>
             </div>
         </section>
         <!-- END BLOG SECTION -->
 
-        <!-- START DONATION SECTION -->
-        <section id="donation" class="section section-image with-arrow"
-                 style="background-image: url('images/donation_cover.jpg');">
-            <div class="section-content center">
-                <h2>Ready to support us ?</h2>
-                <!-- DONATION BUTTON -->
-                <a href="#" class="btn btn-donation btn-success">Make a Donation</a>
-            </div>
-        </section>
-        <!-- END DONATION SECTION -->
-
         <!-- START CONTACT SECTION -->
-        <section id="about" class="section with-arrow">
+        <section id="about" class="section with-arrow section-full-colored ">
             <!-- SECTION TITLE -->
-            <div class="section-header with-arrow">
+            <div class="section-header ">
                 <h1>The Family</h1>
                 <hr>
             </div>
@@ -628,25 +596,25 @@
                     <div class="center row">
                         <div class="col-sm-6 col-md-4 col-lg-3 ">
                             <img src="${ctx}/static/images/6.jpg"
-                                 class="center" alt="皮">
+                                 class="center img-circle" alt="皮">
                             <h3>皮</h3>
                             <p>介绍 Few words about the creation, the ideas, biography of the funder...</p>
                         </div>
                         <div class="col-sm-6 col-md-4 col-lg-3 ">
                             <img src="${ctx}/static/images/6.jpg"
-                                 class="center" alt="点点(Myron)">
+                                 class="center img-circle" alt="点点(Myron)">
                             <h3>点点(Myron)</h3>
                             <p>介绍 Few words about the creation, the ideas, biography of the funder...</p>
                         </div>
                         <div class="col-sm-6 col-md-4 col-lg-3 ">
                             <img src="${ctx}/static/images/6.jpg"
-                                 class="center" alt="小驴">
+                                 class="center img-circle" alt="小驴">
                             <h3>小驴</h3>
                             <p>介绍 Few words about the creation, the ideas, biography of the funder...</p>
                         </div>
                         <div class="col-sm-6 col-md-4 col-lg-3 ">
                             <img src="${ctx}/static/images/6.jpg"
-                                 class="center" alt="晓春">
+                                 class="center img-circle" alt="晓春">
                             <h3>晓春</h3>
                             <p>介绍 Few words about the creation, the ideas, biography of the funder...</p>
                         </div>
@@ -657,9 +625,9 @@
         <!-- END CONTACT SECTION -->
 
         <!-- START FOOTER SECTION -->
-        <section id="footer" class="section section-full-colored">
-            <div class="section-content center">
-                <p>Juntos - Design &amp; Development by <a href="#">2F</a></p>
+        <section id="footer" class="section section-content-colored color2">
+            <div class="section-content center ">
+                <p>晓春家 - Design &amp; Development by zcc &amp; lv</p>
             </div>
         </section>
         <!-- END FOOTER SECTION -->
@@ -678,6 +646,7 @@
 <script src="${ctx}/static/juntos/jquery.meanmenu.min.js"></script>
 <script src="${ctx}/static/juntos/jquery.scrollup.min.js"></script>
 <script src="${ctx}/static/juntos/jquery.sequence.min.js"></script>
+<script src="${ctx}/static/juntos/jquery.isotope.js"></script>
 <script src="${ctx}/static/juntos/jquery.smoothscroll.min.js"></script>
 <script src="${ctx}/static/juntos/pace.js"></script>
 <script src="${ctx}/static/juntos/jquery.sticky.min.js"></script>
