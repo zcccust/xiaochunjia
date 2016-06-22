@@ -6,11 +6,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public interface BlogDao {
-	public List<Blog> findByPage(int record, int pageSize);
+public interface BlogDao extends BaseDao<Blog>{
 
-	public Integer addBlog(Blog blog);
-
-	public Blog find(Integer id);
 }
 

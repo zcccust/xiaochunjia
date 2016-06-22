@@ -130,7 +130,7 @@ public class BlogController {
 	}
 
 	@RequestMapping(value = "/{id}",method=RequestMethod.GET)
-	public ModelAndView show(HttpSession session,@PathVariable Integer id) {
+	public ModelAndView show(HttpSession session,@PathVariable Long id) {
 		Blog blog = blogService.find(id);
 		Map<String,Object> data = new HashMap<String,Object>();
 		data.put("blog",blog);

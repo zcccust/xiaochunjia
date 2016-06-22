@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>  
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.xiaochunjia.data.dao.BlogDao">
-	<select id="countAll" resultType="int">
-		select count(*) c from user;
+	<select id="findAll" resultType="int">
+		select * c from blog;
 	</select>
 	<select id="findByPage" resultType="com.xiaochunjia.data.model.Blog">
 		SELECT id,title,dspText,date,dspImage
@@ -11,16 +11,22 @@
 		LIMIT #{0},#{1}		
 	</select>
 
-	<select id="find" resultType="com.xiaochunjia.data.model.Blog">
+	<select id="get" resultType="com.xiaochunjia.data.model.Blog">
 		SELECT *
 		FROM blog
 		WHERE id=#{0}
 	</select>
 
-	<insert id="addBlog" parameterType="com.xiaochunjia.data.model.Blog"
+	<insert id="add" parameterType="com.xiaochunjia.data.model.Blog"
 			useGeneratedKeys="true" keyProperty="id">
 		insert into blog(title,date,content,status,type,dspText,dspImage,level,tags,mark,comment)
 		values(#{title},#{date},#{content},#{status},#{type},#{dspText},#{dspImage},#{level},#{tags},#{mark},#{comment})
 	</insert>
+
+	<update id="delete">
+		update blog
+		set isDelete=1
+		where id = #{0}
+	</update>
 
 </mapper>

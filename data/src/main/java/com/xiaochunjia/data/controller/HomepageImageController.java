@@ -23,6 +23,6 @@ public class HomepageImageController {
     @RequestMapping(value = "/all",method= RequestMethod.GET)
     @ResponseBody()
     public List<HomepageImage> getBlog(HttpSession session) {
-        return homepageImageService.getAll();
+        return homepageImageService.findAll();
     }
 }
