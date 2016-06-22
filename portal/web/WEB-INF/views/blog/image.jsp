@@ -4,7 +4,7 @@
 <!DOCTYPE >
 <html>
 <head>
-<%@ include file="/WEB-INF/views/include/head.jsp"%>
+<%@ include file="/WEB-INF/views/include/meta.jsp"%>
 <link href="${ctx}/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="${ctx}/static/bootstrap-fileinput/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
 </head>

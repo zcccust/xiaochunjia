@@ -6,107 +6,18 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <%@ include file="/WEB-INF/views/include/head.jsp" %>
+    <%@ include file="/WEB-INF/views/include/meta.jsp" %>
     <!-- BOOTSTRAP -->
     <link href="${ctx}/static/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <!-- COLORS -->
-    <style type="text/css">
-        /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-        * * COLOR SHEME 1 #0DB4E9 (blue) #82b440 (green)
-        * * COLOR SHEME 2 #6BD6D6 #D66B6B
-        * * COLOR SHEME 3 #B782ED #B8ED82
-        * * COLOR SHEME 4 #917B54 #F7A516
-        * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-        .colored,
-        a:hover,
-        .event a,
-        .post a,
-        .section-content-colored .section-content .event-content a.btn:hover,
-        .section-content-colored .section-content .post-content a.btn:hover,
-        .section-full-colored,
-        .section a.btn:hover {
-            color: #82b40;
-        }
-
-        .section-content-colored .section-content .event-content a.btn:hover,
-        .section-content-colored .section-content .post-content a.btn:hover,
-        .section a.btn:hover,
-        .section-image a.btn.btn-donation,
-        #menu a.btn-success {
-            border-color: #82b440;
-        }
-
-        .section-full-colored,
-        .section-content-colored .section-content,
-        .section a.btn,
-        .section-full-colored .section-content,
-        .section-content-colored .section-content .event-content a.btn,
-        .section-content-colored .section-content .post-content a.btn,
-        .section-image a.btn.btn-donation,
-        #single-page .section-header,
-        #menu a.btn-success {
-            background-color: #82b440;
-        }
-
-        .section-content-colored.with-arrow:after,
-        .section-full-colored.with-arrow:after {
-            border-top-color: #82b440;
-        }
-
-        a,
-        .section-content-colored.color2 .section-content .event-content a.btn:hover,
-        .section-content-colored.color2 .section-content .post-content a.btn:hover {
-            color: #0DB4E9;
-        }
-
-        .is-sticky #navigation,
-        .mean-container .mean-nav ul,
-        .pace .pace-progress {
-            background-color: #0DB4E9;
-        }
-
-        .pace .pace-progress-inner {
-            box-shadow: 0 0 10px #0DB4E9, 0 0 5px #0DB4E9;
-        }
-
-        .pace .pace-activity {
-            border-top-color: #0DB4E9;
-            border-left-color: #0DB4E9;
-        }
-
-        .section-content-colored.color2 .section-content .event-content a.btn,
-        .section-content-colored.color2 .section-content .post-content a.btn,
-        .section-content-colored.color2 .section-content {
-            background-color: #0DB4E9;
-        }
-
-        .section-content-colored.color2 .event-content a.btn:hover,
-        .section-content-colored.color2 .post-content a.btn:hover {
-            border-color: #0DB4E9;
-        }
-
-        .section-content-colored.color2.with-arrow:after,
-        .section-full-colored.color2.with-arrow:after {
-            border-top-color: #0DB4E9;
-        }
-    </style>
-    <style type="text/css">
-        .top-margin {
-            margin-top: 1em;
-        }
-    </style>
     <!-- MAIN STYLE -->
     <link href="${ctx}/static/juntos/style.css" rel="stylesheet" media="screen">
     <!-- FONTS -->
     <link href="${ctx}/static/juntos/css.css" rel="stylesheet" type="text/css">
-    <link href="${ctx}/static/juntos/css_002.css" rel="stylesheet" type="text/css">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="${ctx}/static/juntos/html5shiv.js"></script>
     <script src="${ctx}/static/juntos/respond.min.js"></script>
     <![endif]-->
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="img/favicon/favicon.png">
 </head>
 <!-- START BODY -->
 <body class="  pace-done">
@@ -124,14 +35,14 @@
             <nav style="" id="navigation">
                 <div class="container">
                     <!-- LOGO GOES HERE -->
-                    <a href="#" id="logo">晓春家</a>
+                    <a href="#" id="logo"><img src="${ctx}/static/images/logo.png"></a>
                     <!-- MENU -->
                     <nav>
                         <ul id="menu">
                             <li><a href="#home">家</a></li><!--家庭图片；         轮播-->
                             <li><a href="#baby">亲子</a></li><!--亲子游戏；       竖向列表，存色区域-->
                             <li><a href="#food">美食</a></li><!--做过的菜，食谱；  竖向列表，存色区域-->
-                            <li><a href="#photo">摄影</a></li><!--拍过的照片；  图片画廊展示-->
+                            <li><a href="#photo">摄影</a></li><!--拍过的照片；     图片画廊展示-->
                             <li><a href="#blog">博客</a></li><!--技术博文纯文字；  竖向列表,白色-->
                             <li><a href="#about">关于</a></li><!--成员简介；      横向列表-->
                         </ul>
@@ -145,19 +56,15 @@
         <section id="home" style="height: 947px;" class="section ">
             <span style="display: inline;" class="sequence-prev"></span>
             <span style="display: inline;" class="sequence-next"></span>
-            <ul class="sequence-canvas">
+            <ul id="himage" class="sequence-canvas">
+                <!--
                 <li style="background-image: url(${ctx}/static/images/5.jpg); display: list-item; z-index: 1;">
                     <div style="" class="slide-content">
                         <h1>Welcome !</h1>
                         <h3></h3>
                     </div>
                 </li>
-                <li style="background-image: url(${ctx}/static/images/4.JPG); display: list-item; z-index: 1;">
-                    <div style="" class="slide-content">
-                        <h1>Welcome !</h1>
-                        <h3></h3>
-                    </div>
-                </li>
+                -->
             </ul>
         </section>
         <!-- END PROJECT SECTION -->
@@ -250,7 +157,7 @@
                     <!-- Element -->
                     <div class="element">
                         <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/1.JPG">
-                            <!-- Image -->
+                            <!-- HomepageImage -->
                             <img src="${ctx}/static/images/1.JPG" alt=""/>
                             <!-- Content -->
                            <span class="image-info">
@@ -263,7 +170,7 @@
                     </div>
                     <div class="element">
                         <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/2.jpg">
-                            <!-- Image -->
+                            <!-- HomepageImage -->
                             <img src="${ctx}/static/images/2.jpg" alt=""/>
                             <!-- Content -->
                            <span class="image-info">
@@ -276,7 +183,7 @@
                     </div>
                     <div class="element">
                         <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/3.jpg">
-                            <!-- Image -->
+                            <!-- HomepageImage -->
                             <img src="${ctx}/static/images/3.jpg" alt=""/>
                             <!-- Content -->
                            <span class="image-info">
@@ -289,7 +196,7 @@
                     </div>
                     <div class="element">
                         <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/4.JPG">
-                            <!-- Image -->
+                            <!-- HomepageImage -->
                             <img src="${ctx}/static/images/4.JPG" alt=""/>
                             <!-- Content -->
                            <span class="image-info">
@@ -302,7 +209,7 @@
                     </div>
                     <div class="element">
                         <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/5.jpg">
-                            <!-- Image -->
+                            <!-- HomepageImage -->
                             <img src="${ctx}/static/images/5.jpg" alt=""/>
                             <!-- Content -->
                            <span class="image-info">
@@ -315,7 +222,7 @@
                     </div>
                     <div class="element">
                         <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/1.JPG">
-                            <!-- Image -->
+                            <!-- HomepageImage -->
                             <img src="${ctx}/static/images/1.JPG" alt=""/>
                             <!-- Content -->
                            <span class="image-info">
@@ -328,7 +235,7 @@
                     </div>
                     <div class="element">
                         <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/2.jpg">
-                            <!-- Image -->
+                            <!-- HomepageImage -->
                             <img src="${ctx}/static/images/2.jpg" alt=""/>
                             <!-- Content -->
                            <span class="image-info">
@@ -341,7 +248,7 @@
                     </div>
                     <div class="element">
                         <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/3.jpg">
-                            <!-- Image -->
+                            <!-- HomepageImage -->
                             <img src="${ctx}/static/images/3.jpg" alt=""/>
                             <!-- Content -->
                            <span class="image-info">
@@ -354,7 +261,7 @@
                     </div>
                     <div class="element">
                         <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/4.JPG">
-                            <!-- Image -->
+                            <!-- HomepageImage -->
                             <img src="${ctx}/static/images/4.JPG" alt=""/>
                             <!-- Content -->
                            <span class="image-info">
@@ -367,7 +274,7 @@
                     </div>
                     <div class="element">
                         <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/5.jpg">
-                            <!-- Image -->
+                            <!-- HomepageImage -->
                             <img src="${ctx}/static/images/5.jpg" alt=""/>
                             <!-- Content -->
                            <span class="image-info">
@@ -380,7 +287,7 @@
                     </div>
                     <div class="element">
                         <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/1.JPG">
-                            <!-- Image -->
+                            <!-- HomepageImage -->
                             <img src="${ctx}/static/images/1.JPG" alt=""/>
                             <!-- Content -->
                            <span class="image-info">
@@ -393,7 +300,7 @@
                     </div>
                     <div class="element">
                         <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/2.jpg">
-                            <!-- Image -->
+                            <!-- HomepageImage -->
                             <img src="${ctx}/static/images/2.jpg" alt=""/>
                             <!-- Content -->
                            <span class="image-info">
@@ -406,7 +313,7 @@
                     </div>
                     <div class="element">
                         <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/3.jpg">
-                            <!-- Image -->
+                            <!-- HomepageImage -->
                             <img src="${ctx}/static/images/3.jpg" alt=""/>
                             <!-- Content -->
                            <span class="image-info">
@@ -419,7 +326,7 @@
                     </div>
                     <div class="element">
                         <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/4.JPG">
-                            <!-- Image -->
+                            <!-- HomepageImage -->
                             <img src="${ctx}/static/images/4.JPG" alt=""/>
                             <!-- Content -->
                            <span class="image-info">
@@ -432,7 +339,7 @@
                     </div>
                     <div class="element">
                         <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/5.jpg">
-                            <!-- Image -->
+                            <!-- HomepageImage -->
                             <img src="${ctx}/static/images/5.jpg" alt=""/>
                             <!-- Content -->
                            <span class="image-info">
@@ -651,6 +558,28 @@
 <script src="${ctx}/static/juntos/pace.js"></script>
 <script src="${ctx}/static/juntos/jquery.sticky.min.js"></script>
 <script src="${ctx}/static/juntos/custom.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        loadHImages();
+    });
+    function loadHImages() {
+        $.ajax({
+            url: "${ctx}/himage/all",
+            success: function (data, textStatus) {
+                var images = JSON.parse(data);
+                $.each(images, function (i, image) {
+                    var imageStr = '<li style="background-image: url('${ctx}+image.url
+                            +'); display: list-item; z-index: 1;"><div style="" class="slide-content"><h1>'+image.title+
+                            '</h1><h3>'+image.description+'</h3></div></li>';
+                    $("#himage").append(imageStr);
+                });
+            },
+            error: function (r, s, e) {
+
+            }
+        });
+    }
+</script>
 <a style="position: fixed; z-index: 2147483647; display: none;" title="Top" href="#top" id="scrollUp">Top</a>
 
 </body><!-- END BODY --></html>

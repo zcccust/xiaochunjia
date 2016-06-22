@@ -5,4 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="description" content="家庭博客 个人博客 亲子 美食 摄影" />
 <meta name="copyright" content="xiaochunjia.com All Rights Reserved" />
+<!-- Favicon -->
+<link rel="shortcut icon" href="${ctx}/static/images/baby_bottle.png">
 

@@ -4,7 +4,7 @@
 <!DOCTYPE >
 <html>
 <head>
-    <%@ include file="/WEB-INF/views/include/head.jsp" %>
+    <%@ include file="/WEB-INF/views/include/meta.jsp" %>
 </head>
 <body>
 <!-- 页头 -->
