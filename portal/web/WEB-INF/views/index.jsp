@@ -80,26 +80,15 @@
             <!-- SECTION CONTENT -->
             <div class="section-content section-no-top-padding">
                 <div class="container">
-                    <div class="row">
+                    <div id="babyTime" class="row">
+                        <!--
                         <div class="col-lg-12 col-md-12 col-sm-12">
                             <img src="${ctx}/static/images/6.jpg"
                                  class="pull-left img-thumbnail" alt="游戏图片">
                             <h3>踩脚丫</h3>
                             <p>内容描述 Few words about the creation, the ideas, biography of the funder...</p>
                         </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 top-margin">
-                            <img src="${ctx}/static/images/6.jpg"
-                                 class="pull-left img-thumbnail" alt="游戏图片">
-                            <h3>推小车</h3>
-                            <p>内容描述 Few words about the creation, the ideas, biography of the funder...</p>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 top-margin">
-                            <img src="${ctx}/static/images/6.jpg"
-                                 class="pull-left img-thumbnail" alt="游戏图片">
-                            <h3>扒尿炕</h3>
-                            <p>内容描述 Few words about the creation, the ideas, biography of the funder...</p>
-                        </div>
-                        <button type="button" class="btn btn-primary">更多</button>
+                        -->
                     </div>
                 </div>
             </div>
@@ -573,6 +562,29 @@
                             '</h1><h3>'+image.description+'</h3></div></li>';
                     $("#himage").append(imageStr);
                 });
+                loadBabyTimes();
+            },
+            error: function (r, s, e) {
+
+            }
+        });
+    }
+    function loadBabyTimes(){
+        $.ajax({
+            url: "${ctx}/baby/top",
+            success: function (data, textStatus) {
+                var bts = JSON.parse(data);
+                $.each(bts, function (i, bt) {
+                    var c="";
+                    if(i>0){
+                        c="top-margin";
+                    }
+                    var btStr = '<div class="col-lg-12 col-md-12 col-sm-12 '+c+'"><img src="'
+                    ${ctx}+ bt.imageUrl+'"class="pull-left img-thumbnail" alt="'
+                    +bt.title+'"><h3>'+bt.title+'</h3><p>'+bt.description+'</p></div>';
+                    $("#babyTime").append(btStr);
+                });
+                $("#babyTime").append('<button type="button" class="btn btn-primary">更多</button>');
             },
             error: function (r, s, e) {
 
