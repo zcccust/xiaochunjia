@@ -79,17 +79,18 @@
             </div>
             <!-- SECTION CONTENT -->
             <div class="section-content section-no-top-padding">
-                <div class="container">
-                    <div id="babyTime" class="row">
+                <div id="babyTime" class="container">
                         <!--
-                        <div class="col-lg-12 col-md-12 col-sm-12">
-                            <img src="${ctx}/static/images/6.jpg"
-                                 class="pull-left img-thumbnail" alt="游戏图片">
-                            <h3>踩脚丫</h3>
-                            <p>内容描述 Few words about the creation, the ideas, biography of the funder...</p>
+                        <div class="row show-grid">
+                            <div class="col-lg-2 col-md-2 col-sm-2">
+                                <img src="${ctx}/static/images/6.jpg" class="img-thumbnail" alt="游戏图片">
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-sm-10">
+                                <h3>踩脚丫</h3>
+                                <p>内容描述 Few words about the creation, the ideas, biography of the funder...</p>
+                            </div>
                         </div>
                         -->
-                    </div>
                 </div>
             </div>
         </section>
@@ -105,28 +106,18 @@
             </div>
             <!-- SECTION CONTENT -->
             <div class="section-content section-no-top-padding with-arrow">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12">
-                            <img src="${ctx}/static/images/6.jpg"
-                                 class="pull-left img-thumbnail" alt="游戏图片">
-                            <h3>踩脚丫</h3>
-                            <p>内容描述 Few words about the creation, the ideas, biography of the funder...</p>
+                <div id="foodContainer" class="container">
+                    <!--
+                        <div class="row show-grid">
+                            <div class="col-lg-2 col-md-2 col-sm-2">
+                                <img src="${ctx}/static/images/6.jpg" class="img-thumbnail" alt="游戏图片">
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-sm-10">
+                                <h3>踩脚丫</h3>
+                                <p>内容描述 Few words about the creation, the ideas, biography of the funder...</p>
+                            </div>
                         </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 top-margin">
-                            <img src="${ctx}/static/images/6.jpg"
-                                 class="pull-left img-thumbnail" alt="游戏图片">
-                            <h3>推小车</h3>
-                            <p>内容描述 Few words about the creation, the ideas, biography of the funder...</p>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 top-margin">
-                            <img src="${ctx}/static/images/6.jpg"
-                                 class="pull-left img-thumbnail" alt="游戏图片">
-                            <h3>扒尿炕</h3>
-                            <p>内容描述 Few words about the creation, the ideas, biography of the funder...</p>
-                        </div>
-                        <button type="button" class="btn btn-primary">更多</button>
-                    </div>
+                        -->
                 </div>
             </div>
         </section>
@@ -565,7 +556,7 @@
                 loadBabyTimes();
             },
             error: function (r, s, e) {
-
+                loadBabyTimes();
             }
         });
     }
@@ -575,21 +566,40 @@
             success: function (data, textStatus) {
                 var bts = JSON.parse(data);
                 $.each(bts, function (i, bt) {
-                    var c="";
-                    if(i>0){
-                        c="top-margin";
-                    }
-                    var btStr = '<div class="col-lg-12 col-md-12 col-sm-12 '+c+'"><img src="'
-                    ${ctx}+ bt.imageUrl+'"class="pull-left img-thumbnail" alt="'
-                    +bt.title+'"><h3>'+bt.title+'</h3><p>'+bt.description+'</p></div>';
+                     var btStr = '<div class="row show-grid"><div class="col-lg-2 col-md-2 col-sm-2"><img src="'${ctx}+bt.imageUrl
+                            +'" class="img-thumbnail" alt="'+bt.title+'"></div><div class="col-lg-10 col-md-10 col-sm-10"><h3>'
+                            +bt.title+'</h3><p>'+bt.description+'</p></div></div>';
                     $("#babyTime").append(btStr);
                 });
                 $("#babyTime").append('<button type="button" class="btn btn-primary">更多</button>');
+                loadFoods();
             },
             error: function (r, s, e) {
-
+                loadFoods();
             }
         });
+    }
+    function loadFoods() {
+        $.ajax({
+            url: "${ctx}/food/top",
+            success: function (data, textStatus) {
+                var foods = JSON.parse(data);
+                $.each(foods, function (i, food) {
+                    var foodStr = '<div class="row show-grid"><div class="col-lg-2 col-md-2 col-sm-2"><img src="'${ctx}+food.imageUrl
+                            +'" class="img-thumbnail" alt="'+food.title+'"></div><div class="col-lg-10 col-md-10 col-sm-10"><h3>'
+                            +food.title+'</h3><p>'+food.description+'</p></div></div>';
+                    $("#foodContainer").append(foodStr);
+                });
+                $("#foodContainer").append('<button type="button" class="btn btn-primary">更多</button>');
+                loadPhotos();
+            },
+            error: function (r, s, e) {
+                loadPhotos();
+            }
+        });
+    }
+    function loadPhotos() {
+        
     }
 </script>
 <a style="position: fixed; z-index: 2147483647; display: none;" title="Top" href="#top" id="scrollUp">Top</a>
