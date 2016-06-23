@@ -104,8 +104,5 @@ function isotope() {
 }
 
 $(document).ready(function(){
-	isotope(); // Initilize isotope 
-	$(window).smartresize(function(){
-		isotope(); // Call isotope when resize
-	});
+		
 });

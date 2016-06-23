@@ -1,7 +1,7 @@
 package com.xiaochunjia.data.controller;
 
-import com.xiaochunjia.data.model.BabyTime;
-import com.xiaochunjia.data.service.BabyTimeService;
+import com.xiaochunjia.data.model.Photo;
+import com.xiaochunjia.data.service.PhotoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,17 +13,17 @@ import java.util.List;
 
 /**
  * Created by zhangchengchun on 2016/6/22.
- * 亲子请求处理类
+ * 摄影作品请求处理类
  */
 @Controller
-@RequestMapping(value = "/baby")
-public class BabyTimeController {
+@RequestMapping(value = "/photo")
+public class PhotoController {
     @Autowired
-    private BabyTimeService babyTimeService;
+    private PhotoService photoService;
 
-    @RequestMapping(value = "/top",method= RequestMethod.GET)
+    @RequestMapping(value = "/all",method= RequestMethod.GET)
     @ResponseBody()
-    public List<BabyTime> getTop(HttpSession session) {
-        return babyTimeService.findByPage(0,5);
+    public List<Photo> getBlog(HttpSession session) {
+        return photoService.findByPage(1,15);
     }
 }

@@ -134,202 +134,17 @@
             <!-- SECTION CONTENT -->
             <div class="section-content">
                 <div id="portfolio-one">
-                    <!-- Element -->
+                    <!--
                     <div class="element">
                         <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/1.JPG">
-                            <!-- HomepageImage -->
                             <img src="${ctx}/static/images/1.JPG" alt=""/>
-                            <!-- Content -->
                            <span class="image-info">
-                            <!-- Title -->
                               <span class="image-title">Hello how are you</span>
-                               <!-- Desc -->
                               <span class="image-desc">Cras blandit, enim id mattis ultrices, erat dolor varius felis, quis consequat nibh ligula ut lectus</span>
                            </span>
                         </a>
                     </div>
-                    <div class="element">
-                        <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/2.jpg">
-                            <!-- HomepageImage -->
-                            <img src="${ctx}/static/images/2.jpg" alt=""/>
-                            <!-- Content -->
-                           <span class="image-info">
-                            <!-- Title -->
-                              <span class="image-title">Hello how are you</span>
-                               <!-- Desc -->
-                              <span class="image-desc">Cras blandit, enim id mattis ultrices, erat dolor varius felis, quis consequat nibh ligula ut lectus</span>
-                           </span>
-                        </a>
-                    </div>
-                    <div class="element">
-                        <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/3.jpg">
-                            <!-- HomepageImage -->
-                            <img src="${ctx}/static/images/3.jpg" alt=""/>
-                            <!-- Content -->
-                           <span class="image-info">
-                            <!-- Title -->
-                              <span class="image-title">Hello how are you</span>
-                               <!-- Desc -->
-                              <span class="image-desc">Cras blandit, enim id mattis ultrices, erat dolor varius felis, quis consequat nibh ligula ut lectus</span>
-                           </span>
-                        </a>
-                    </div>
-                    <div class="element">
-                        <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/4.JPG">
-                            <!-- HomepageImage -->
-                            <img src="${ctx}/static/images/4.JPG" alt=""/>
-                            <!-- Content -->
-                           <span class="image-info">
-                            <!-- Title -->
-                              <span class="image-title">Hello how are you</span>
-                               <!-- Desc -->
-                              <span class="image-desc">Cras blandit, enim id mattis ultrices, erat dolor varius felis, quis consequat nibh ligula ut lectus</span>
-                           </span>
-                        </a>
-                    </div>
-                    <div class="element">
-                        <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/5.jpg">
-                            <!-- HomepageImage -->
-                            <img src="${ctx}/static/images/5.jpg" alt=""/>
-                            <!-- Content -->
-                           <span class="image-info">
-                            <!-- Title -->
-                              <span class="image-title">Hello how are you</span>
-                               <!-- Desc -->
-                              <span class="image-desc">Cras blandit, enim id mattis ultrices, erat dolor varius felis, quis consequat nibh ligula ut lectus</span>
-                           </span>
-                        </a>
-                    </div>
-                    <div class="element">
-                        <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/1.JPG">
-                            <!-- HomepageImage -->
-                            <img src="${ctx}/static/images/1.JPG" alt=""/>
-                            <!-- Content -->
-                           <span class="image-info">
-                            <!-- Title -->
-                              <span class="image-title">Hello how are you</span>
-                               <!-- Desc -->
-                              <span class="image-desc">Cras blandit, enim id mattis ultrices, erat dolor varius felis, quis consequat nibh ligula ut lectus</span>
-                           </span>
-                        </a>
-                    </div>
-                    <div class="element">
-                        <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/2.jpg">
-                            <!-- HomepageImage -->
-                            <img src="${ctx}/static/images/2.jpg" alt=""/>
-                            <!-- Content -->
-                           <span class="image-info">
-                            <!-- Title -->
-                              <span class="image-title">Hello how are you</span>
-                               <!-- Desc -->
-                              <span class="image-desc">Cras blandit, enim id mattis ultrices, erat dolor varius felis, quis consequat nibh ligula ut lectus</span>
-                           </span>
-                        </a>
-                    </div>
-                    <div class="element">
-                        <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/3.jpg">
-                            <!-- HomepageImage -->
-                            <img src="${ctx}/static/images/3.jpg" alt=""/>
-                            <!-- Content -->
-                           <span class="image-info">
-                            <!-- Title -->
-                              <span class="image-title">Hello how are you</span>
-                               <!-- Desc -->
-                              <span class="image-desc">Cras blandit, enim id mattis ultrices, erat dolor varius felis, quis consequat nibh ligula ut lectus</span>
-                           </span>
-                        </a>
-                    </div>
-                    <div class="element">
-                        <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/4.JPG">
-                            <!-- HomepageImage -->
-                            <img src="${ctx}/static/images/4.JPG" alt=""/>
-                            <!-- Content -->
-                           <span class="image-info">
-                            <!-- Title -->
-                              <span class="image-title">Hello how are you</span>
-                               <!-- Desc -->
-                              <span class="image-desc">Cras blandit, enim id mattis ultrices, erat dolor varius felis, quis consequat nibh ligula ut lectus</span>
-                           </span>
-                        </a>
-                    </div>
-                    <div class="element">
-                        <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/5.jpg">
-                            <!-- HomepageImage -->
-                            <img src="${ctx}/static/images/5.jpg" alt=""/>
-                            <!-- Content -->
-                           <span class="image-info">
-                            <!-- Title -->
-                              <span class="image-title">Hello how are you</span>
-                               <!-- Desc -->
-                              <span class="image-desc">Cras blandit, enim id mattis ultrices, erat dolor varius felis, quis consequat nibh ligula ut lectus</span>
-                           </span>
-                        </a>
-                    </div>
-                    <div class="element">
-                        <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/1.JPG">
-                            <!-- HomepageImage -->
-                            <img src="${ctx}/static/images/1.JPG" alt=""/>
-                            <!-- Content -->
-                           <span class="image-info">
-                            <!-- Title -->
-                              <span class="image-title">Hello how are you</span>
-                               <!-- Desc -->
-                              <span class="image-desc">Cras blandit, enim id mattis ultrices, erat dolor varius felis, quis consequat nibh ligula ut lectus</span>
-                           </span>
-                        </a>
-                    </div>
-                    <div class="element">
-                        <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/2.jpg">
-                            <!-- HomepageImage -->
-                            <img src="${ctx}/static/images/2.jpg" alt=""/>
-                            <!-- Content -->
-                           <span class="image-info">
-                            <!-- Title -->
-                              <span class="image-title">Hello how are you</span>
-                               <!-- Desc -->
-                              <span class="image-desc">Cras blandit, enim id mattis ultrices, erat dolor varius felis, quis consequat nibh ligula ut lectus</span>
-                           </span>
-                        </a>
-                    </div>
-                    <div class="element">
-                        <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/3.jpg">
-                            <!-- HomepageImage -->
-                            <img src="${ctx}/static/images/3.jpg" alt=""/>
-                            <!-- Content -->
-                           <span class="image-info">
-                            <!-- Title -->
-                              <span class="image-title">Hello how are you</span>
-                               <!-- Desc -->
-                              <span class="image-desc">Cras blandit, enim id mattis ultrices, erat dolor varius felis, quis consequat nibh ligula ut lectus</span>
-                           </span>
-                        </a>
-                    </div>
-                    <div class="element">
-                        <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/4.JPG">
-                            <!-- HomepageImage -->
-                            <img src="${ctx}/static/images/4.JPG" alt=""/>
-                            <!-- Content -->
-                           <span class="image-info">
-                            <!-- Title -->
-                              <span class="image-title">Hello how are you</span>
-                               <!-- Desc -->
-                              <span class="image-desc">Cras blandit, enim id mattis ultrices, erat dolor varius felis, quis consequat nibh ligula ut lectus</span>
-                           </span>
-                        </a>
-                    </div>
-                    <div class="element">
-                        <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/5.jpg">
-                            <!-- HomepageImage -->
-                            <img src="${ctx}/static/images/5.jpg" alt=""/>
-                            <!-- Content -->
-                           <span class="image-info">
-                               <!-- Title -->
-                              <span class="image-title">Hello how are you</span>
-                               <!-- Desc -->
-                              <span class="image-desc">Cras blandit, enim id mattis ultrices, erat dolor varius felis, quis consequat nibh ligula ut lectus</span>
-                           </span>
-                        </a>
-                    </div>
+                    -->
                 </div>
                 <div class="center" style="margin-top: 5px">
                     <button type="button" class="btn btn-primary">更多</button>
@@ -537,7 +352,6 @@
 <script src="${ctx}/static/juntos/jquery.smoothscroll.min.js"></script>
 <script src="${ctx}/static/juntos/pace.js"></script>
 <script src="${ctx}/static/juntos/jquery.sticky.min.js"></script>
-<script src="${ctx}/static/juntos/custom.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
         loadHImages();
@@ -599,9 +413,35 @@
         });
     }
     function loadPhotos() {
+        //return;
+        $.ajax({
+            url: "${ctx}/photo/all",
+            success: function (data, textStatus) {
+                var photos = JSON.parse(data);
+                $.each(photos, function (i, photo) {
+                    var photoStr = '<div class="element"><a class="fancybox" data-fancybox-group="group1" href="'${ctx}
+                            +photo.url+'"><img src="'${ctx}+photo.thumbnail+'" alt=""/><span class="image-info"><span class="image-title">'
+                            +photo.title+'</span><span class="image-desc">'+photo.description+'</span></span></a></div>';
+                    $("#portfolio-one").append(photoStr);
+                });
+                setTimeout(function (){
+                    isotope(); // Initilize isotope
+                    $(window).smartresize(function(){
+                        isotope(); // Call isotope when resize
+                    });
+                }, 100);
+                loadBlogs();
+            },
+            error: function (r, s, e) {
+                loadBlogs();
+            }
+        });
+    }
+    function loadBlogs() {
         
     }
 </script>
+<script src="${ctx}/static/juntos/custom.js"></script>
 <a style="position: fixed; z-index: 2147483647; display: none;" title="Top" href="#top" id="scrollUp">Top</a>
 
 </body><!-- END BODY --></html>

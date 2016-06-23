@@ -13,6 +13,7 @@ import java.util.List;
 
 /**
  * Created by zhangchengchun on 2016/6/22.
+ * 首页图片请求处理类
  */
 @Controller
 @RequestMapping(value = "/himage")
