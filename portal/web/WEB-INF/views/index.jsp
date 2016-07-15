@@ -2,446 +2,266 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ include file="/WEB-INF/views/include/taglib.jsp" %>
 <!DOCTYPE html>
-<html class="">
+<html lang="en">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <%@ include file="/WEB-INF/views/include/meta.jsp" %>
-    <!-- BOOTSTRAP -->
-    <link href="${ctx}/static/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <!-- MAIN STYLE -->
-    <link href="${ctx}/static/juntos/style.css" rel="stylesheet" media="screen">
-    <!-- FONTS -->
-    <link href="${ctx}/static/juntos/css.css" rel="stylesheet" type="text/css">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="${ctx}/static/juntos/html5shiv.js"></script>
-    <script src="${ctx}/static/juntos/respond.min.js"></script>
-    <![endif]-->
+    <meta charset="UTF-8">
+    <title>晓春家</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="一个讲述家庭生活的网站" name="description">
+    <meta content="个人博客,家庭博客,情侣博客,博客,美食,亲子" name="keywords">
+    <meta content="晓春,小驴" name="author">
+    <meta content="index,follow" name="robots">
+    <meta content="xiaochunjia.com" name="application-name">
+    <link href="/static/images/baby_bottle.png" rel="shortcut icon">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/2.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/2.3.2/css/bootstrap-responsive.min.css">
+    <link href="${ctx}/static/bootstrap/css/doc.css" rel="stylesheet" type="text/css">
 </head>
-<!-- START BODY -->
-<body class="  pace-done">
-<div class="pace  pace-inactive">
-    <div data-progress="99" data-progress-text="100%" style="width: 100%;" class="pace-progress">
-        <div class="pace-progress-inner"></div>
-    </div>
-    <div class="pace-activity"></div>
-</div>
-<div id="page">
-    <!-- START MAIN CONTAINER -->
-    <div id="main-container">
-        <!-- START NAVIGATION -->
-        <div style="height: 96px;" class="sticky-wrapper" id="navigation-sticky-wrapper">
-            <nav style="" id="navigation">
-                <div class="container">
-                    <!-- LOGO GOES HERE -->
-                    <a href="#" id="logo"><img src="${ctx}/static/images/logo.png"></a>
-                    <!-- MENU -->
-                    <nav>
-                        <ul id="menu">
-                            <li><a href="#home">家</a></li><!--家庭图片；         轮播-->
-                            <li><a href="#baby">亲子</a></li><!--亲子游戏；       竖向列表，存色区域-->
-                            <li><a href="#food">美食</a></li><!--做过的菜，食谱；  竖向列表，存色区域-->
-                            <li><a href="#photo">摄影</a></li><!--拍过的照片；     图片画廊展示-->
-                            <li><a href="#blog">博客</a></li><!--技术博文纯文字；  竖向列表,白色-->
-                            <li><a href="#about">关于</a></li><!--成员简介；      横向列表-->
-                        </ul>
-                    </nav>
-                </div>
-            </nav>
+<body data-target=".bs-docs-sidebar" data-spy="scroll">
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#" id="logo"><img src="${ctx}/static/images/logo-m.png"></a>
+            </div>
+            <div class="navbar-collapse collapse" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li class="hidden-sm hidden-md">
+                        <input id="info" type="text">
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right hidden-sm">
+                    <li>
+                        <a href="/about/">关于</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <!-- END NAVIGATION -->
-
-        <!-- START PROJECT SECTION -->
-        <section id="home" style="height: 947px;" class="section ">
-            <span style="display: inline;" class="sequence-prev"></span>
-            <span style="display: inline;" class="sequence-next"></span>
-            <ul id="himage" class="sequence-canvas">
-                <!--
-                <li style="background-image: url(${ctx}/static/images/5.jpg); display: list-item; z-index: 1;">
-                    <div style="" class="slide-content">
-                        <h1>Welcome !</h1>
-                        <h3></h3>
-                    </div>
+    </div>
+</div>
+<header id="overview" class="jumbotron subhead">
+    <div class="container">
+        <h1>家</h1>
+        <p class="lead">一间房,一盏灯,一张床。</p>
+    </div>
+</header>
+<div class="container">
+    <div class="row">
+        <div class="span2 bs-docs-sidebar">
+            <ul class="span2 nav nav-list bs-docs-sidenav affix-top">
+                <li class="active">
+                    <a >
+                        <i class="icon-chevron-right"></i>
+                        首页
+                    </a>
                 </li>
-                -->
+                <li class="">
+                    <a >
+                        <i class="icon-chevron-right"></i>
+                        亲子
+                    </a>
+                </li>
+                <li class="">
+                    <a >
+                        <i class="icon-chevron-right"></i>
+                        旅行
+                    </a>
+                </li>
+                <li class="">
+                    <a >
+                        <i class="icon-chevron-right"></i>
+                        美食
+                    </a>
+                </li>
+                <li class="">
+                    <a >
+                        <i class="icon-chevron-right"></i>
+                        烘焙
+                    </a>
+                </li>
+                <li class="">
+                    <a >
+                        <i class="icon-chevron-right"></i>
+                        摄影
+                    </a>
+                </li>
+                <li class="">
+                    <a >
+                        <i class="icon-chevron-right"></i>
+                        读书
+                    </a>
+                </li>
+                <li class="">
+                    <a >
+                        <i class="icon-chevron-right"></i>
+                        Wiki
+                    </a>
+                </li>
             </ul>
-        </section>
-        <!-- END PROJECT SECTION -->
-
-        <!-- START TEAM SECTION -->
-        <section id="baby" class="center section section-full-colored with-arrow">
-            <!-- SECTION TITLE -->
-            <div class="section-header ">
-                <br>
-                <h1>亲子</h1>
-                <hr>
-            </div>
-            <!-- SECTION CONTENT -->
-            <div class="section-content section-no-top-padding">
-                <div id="babyTime" class="container">
-                        <!--
-                        <div class="row show-grid">
-                            <div class="col-lg-2 col-md-2 col-sm-2">
-                                <img src="${ctx}/static/images/6.jpg" class="img-thumbnail" alt="游戏图片">
-                            </div>
-                            <div class="col-lg-10 col-md-10 col-sm-10">
-                                <h3>踩脚丫</h3>
-                                <p>内容描述 Few words about the creation, the ideas, biography of the funder...</p>
-                            </div>
-                        </div>
-                        -->
-                </div>
-            </div>
-        </section>
-        <!-- END TEAM SECTION -->
-
-        <!-- START SERVICES SECTION -->
-        <section id="food" class="center section ">
-            <!-- SECTION TITLE -->
-            <div class="section-header with-arrow">
-                <br>
-                <h1>美食</h1>
-                <hr>
-            </div>
-            <!-- SECTION CONTENT -->
-            <div class="section-content section-no-top-padding with-arrow">
-                <div id="foodContainer" class="container">
+        </div>
+        <div class="span8">
+            <div id="blog" style="min-height: 860px;">
+                <div id="data">
                     <!--
-                        <div class="row show-grid">
-                            <div class="col-lg-2 col-md-2 col-sm-2">
-                                <img src="${ctx}/static/images/6.jpg" class="img-thumbnail" alt="游戏图片">
-                            </div>
-                            <div class="col-lg-10 col-md-10 col-sm-10">
-                                <h3>踩脚丫</h3>
-                                <p>内容描述 Few words about the creation, the ideas, biography of the funder...</p>
-                            </div>
+                    <div class="blog-list">
+                        <h3>这里是标题</h3>
+                        <div>这里是纯文字描述内容</div>
+                        <div class="row-fluid opt">
+                            <p class="span10 "><i class="icon-time"></i>2016-7-14</p>
+                            <p class="text-right span2"><a >阅读原文</a></p>
                         </div>
-                        -->
-                </div>
-            </div>
-        </section>
-        <!-- END SERVICES SECTION -->
-
-        <!-- START GALLERY SECTION -->
-        <section id="photo" class="section with-arrow  section-full-colored ">
-            <!-- SECTION TITLE -->
-            <div class="section-header center">
-                <br>
-                <h1>摄影</h1>
-                <hr>
-            </div>
-            <!-- SECTION CONTENT -->
-            <div class="section-content">
-                <div id="portfolio-one">
-                    <!--
-                    <div class="element">
-                        <a class="fancybox" data-fancybox-group="group1" href="${ctx}/static/images/1.JPG">
-                            <img src="${ctx}/static/images/1.JPG" alt=""/>
-                           <span class="image-info">
-                              <span class="image-title">Hello how are you</span>
-                              <span class="image-desc">Cras blandit, enim id mattis ultrices, erat dolor varius felis, quis consequat nibh ligula ut lectus</span>
-                           </span>
-                        </a>
+                    </div>
+                    <div class="blog-list">
+                        <h3>这里是标题</h3>
+                        <div class="row-fluid">
+                            <ul class="thumbnails">
+                                <li class="span4">
+                                    <a class="thumbnail" href="#">
+                                        <img alt="260x180" data-src="holder.js/260x180" style="width: 260px; height: 180px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQQAAAC0CAYAAABytVLLAAAEBUlEQVR4nO3aMXbaWhRA0cx/KO7U0dDRUdIzBKbgFH/p5KFIgPO9jIpd7CJEIDlZ9+jx5F+32+0T4Ha7ff569wUA+yEIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIOzFN0+fHx8edrWPP5/Nfx16v17tjTqfT3d8fj8dvu8bz+bz694fD4aVzHo/Hu+NOp9Pb//35jyDswFoMtgZ9OXRrxy0HbnY4HL7l+taCsPUzLM+5df3fESz+P0HYgWmaPi+XS38eVwDjoIx3/fH40+lUEC6Xy1+Du/W+V69tObzLILx6zvHnml8b47WMHz9PEHboer2uBuHRHXo2D9g0TXevj8vzcYDHO/g4sPMyfpqmz2ma7q5pef7xfWs/wzz88+pgPOejz+XnCcIOjQM7D+b42jhEy0FaG7rb7c+dfg7MeAef3788ZvRscJfXO4dpvI6tz7eXsB+CsENrewPLTcKtZfzW0K2FYj52mqa7z1+7plfu5M/2BbYG/1GI+FmCsCPjKmA5eOPAjgO1XPp/JQjL8z0a9mdB2NpUXPvKIwj7JQg7sVwBPHqMOL6+3DOYh+vZV4bl+9f2HUaPgvBs32I+/qsrB36eIOzAOOxbjwbHjbu1R4zzML6yqTi/trZC2BrKR0GYVx9bq5L5dZuK+ycIO/AsBsvj5gFbexoxhmPtEeAYk3E18ezx3ytBGFcvaxuja48ix/O++/8BQXi7td86HI2ReLSxOH7m1vf58e6/DMA48GthehSEtZXG1rVtHWN1sA+C8GZfCcLa8Vvf+5e/ETjGYAzLuMwfI7H86vAvTxm2Vjyv/OYj7yEIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEID8BgsB3gRIkWYuAAAAAElFTkSuQmCC">
+                                    </a>
+                                </li>
+                                <li class="span4">
+                                    <a class="thumbnail" href="#">
+                                        <img alt="260x180" data-src="holder.js/260x180" style="width: 260px; height: 180px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQQAAAC0CAYAAABytVLLAAAEBUlEQVR4nO3aMXbaWhRA0cx/KO7U0dDRUdIzBKbgFH/p5KFIgPO9jIpd7CJEIDlZ9+jx5F+32+0T4Ha7ff569wUA+yEIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIOzFN0+fHx8edrWPP5/Nfx16v17tjTqfT3d8fj8dvu8bz+bz694fD4aVzHo/Hu+NOp9Pb//35jyDswFoMtgZ9OXRrxy0HbnY4HL7l+taCsPUzLM+5df3fESz+P0HYgWmaPi+XS38eVwDjoIx3/fH40+lUEC6Xy1+Du/W+V69tObzLILx6zvHnml8b47WMHz9PEHboer2uBuHRHXo2D9g0TXevj8vzcYDHO/g4sPMyfpqmz2ma7q5pef7xfWs/wzz88+pgPOejz+XnCcIOjQM7D+b42jhEy0FaG7rb7c+dfg7MeAef3788ZvRscJfXO4dpvI6tz7eXsB+CsENrewPLTcKtZfzW0K2FYj52mqa7z1+7plfu5M/2BbYG/1GI+FmCsCPjKmA5eOPAjgO1XPp/JQjL8z0a9mdB2NpUXPvKIwj7JQg7sVwBPHqMOL6+3DOYh+vZV4bl+9f2HUaPgvBs32I+/qsrB36eIOzAOOxbjwbHjbu1R4zzML6yqTi/trZC2BrKR0GYVx9bq5L5dZuK+ycIO/AsBsvj5gFbexoxhmPtEeAYk3E18ezx3ytBGFcvaxuja48ix/O++/8BQXi7td86HI2ReLSxOH7m1vf58e6/DMA48GthehSEtZXG1rVtHWN1sA+C8GZfCcLa8Vvf+5e/ETjGYAzLuMwfI7H86vAvTxm2Vjyv/OYj7yEIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEID8BgsB3gRIkWYuAAAAAElFTkSuQmCC">
+                                    </a>
+                                </li>
+                                <li class="span4">
+                                    <a class="thumbnail" href="#">
+                                        <img alt="260x180" data-src="holder.js/260x180" style="width: 260px; height: 180px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQQAAAC0CAYAAABytVLLAAAEBUlEQVR4nO3aMXbaWhRA0cx/KO7U0dDRUdIzBKbgFH/p5KFIgPO9jIpd7CJEIDlZ9+jx5F+32+0T4Ha7ff569wUA+yEIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIOzFN0+fHx8edrWPP5/Nfx16v17tjTqfT3d8fj8dvu8bz+bz694fD4aVzHo/Hu+NOp9Pb//35jyDswFoMtgZ9OXRrxy0HbnY4HL7l+taCsPUzLM+5df3fESz+P0HYgWmaPi+XS38eVwDjoIx3/fH40+lUEC6Xy1+Du/W+V69tObzLILx6zvHnml8b47WMHz9PEHboer2uBuHRHXo2D9g0TXevj8vzcYDHO/g4sPMyfpqmz2ma7q5pef7xfWs/wzz88+pgPOejz+XnCcIOjQM7D+b42jhEy0FaG7rb7c+dfg7MeAef3788ZvRscJfXO4dpvI6tz7eXsB+CsENrewPLTcKtZfzW0K2FYj52mqa7z1+7plfu5M/2BbYG/1GI+FmCsCPjKmA5eOPAjgO1XPp/JQjL8z0a9mdB2NpUXPvKIwj7JQg7sVwBPHqMOL6+3DOYh+vZV4bl+9f2HUaPgvBs32I+/qsrB36eIOzAOOxbjwbHjbu1R4zzML6yqTi/trZC2BrKR0GYVx9bq5L5dZuK+ycIO/AsBsvj5gFbexoxhmPtEeAYk3E18ezx3ytBGFcvaxuja48ix/O++/8BQXi7td86HI2ReLSxOH7m1vf58e6/DMA48GthehSEtZXG1rVtHWN1sA+C8GZfCcLa8Vvf+5e/ETjGYAzLuMwfI7H86vAvTxm2Vjyv/OYj7yEIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEID8BgsB3gRIkWYuAAAAAElFTkSuQmCC">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row-fluid opt">
+                            <p class="span10 "><i class="icon-time"></i>2016-7-14</p>
+                            <p class="text-right span2"><a >阅读原文</a></p>
+                        </div>
+                    </div>
+                    <div class="blog-ist">
+                        <h3>这里是标题</h3>
+                        <div class="row-fluid">
+                            <ul class="thumbnails">
+                                <li class="span4">
+                                    <a class="thumbnail" href="#">
+                                        <img alt="260x180" data-src="holder.js/260x180" style="width: 260px; height: 180px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQQAAAC0CAYAAABytVLLAAAEBUlEQVR4nO3aMXbaWhRA0cx/KO7U0dDRUdIzBKbgFH/p5KFIgPO9jIpd7CJEIDlZ9+jx5F+32+0T4Ha7ff569wUA+yEIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIOzFN0+fHx8edrWPP5/Nfx16v17tjTqfT3d8fj8dvu8bz+bz694fD4aVzHo/Hu+NOp9Pb//35jyDswFoMtgZ9OXRrxy0HbnY4HL7l+taCsPUzLM+5df3fESz+P0HYgWmaPi+XS38eVwDjoIx3/fH40+lUEC6Xy1+Du/W+V69tObzLILx6zvHnml8b47WMHz9PEHboer2uBuHRHXo2D9g0TXevj8vzcYDHO/g4sPMyfpqmz2ma7q5pef7xfWs/wzz88+pgPOejz+XnCcIOjQM7D+b42jhEy0FaG7rb7c+dfg7MeAef3788ZvRscJfXO4dpvI6tz7eXsB+CsENrewPLTcKtZfzW0K2FYj52mqa7z1+7plfu5M/2BbYG/1GI+FmCsCPjKmA5eOPAjgO1XPp/JQjL8z0a9mdB2NpUXPvKIwj7JQg7sVwBPHqMOL6+3DOYh+vZV4bl+9f2HUaPgvBs32I+/qsrB36eIOzAOOxbjwbHjbu1R4zzML6yqTi/trZC2BrKR0GYVx9bq5L5dZuK+ycIO/AsBsvj5gFbexoxhmPtEeAYk3E18ezx3ytBGFcvaxuja48ix/O++/8BQXi7td86HI2ReLSxOH7m1vf58e6/DMA48GthehSEtZXG1rVtHWN1sA+C8GZfCcLa8Vvf+5e/ETjGYAzLuMwfI7H86vAvTxm2Vjyv/OYj7yEIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEIAIAhBBACIIQAQBiCAAEQQgggBEEID8BgsB3gRIkWYuAAAAAElFTkSuQmCC">
+                                    </a>
+                                </li>
+                                <li class="span8">
+                                    <p>图片描述文字图片描述文字图片描述文字图片描述文字图片描述文字图片描述文字图片描述文字图片描述文字图片描述文字图片描述文字图片描述文字图片描述文字图片描述文字图片描述文字</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row-fluid opt">
+                            <p class="span10 "><i class="icon-time"></i>2016-7-14</p>
+                            <p class="text-right span2"><a >阅读原文</a></p>
+                        </div>
                     </div>
                     -->
                 </div>
-                <div class="center" style="margin-top: 5px">
-                    <button type="button" class="btn btn-primary">更多</button>
-                </div>
+                <div class="loading hidden" id="loading">loading!</div>
             </div>
-        </section>
-        <!-- END GALLERY SECTION -->
-
-        <!-- START BLOG SECTION -->
-        <section id="blog" class="section " >
-            <!-- SECTION TITLE -->
-            <div class="section-content center ">
-                <h1>最新博文</h1>
-                <hr>
-            </div>
-            <!-- SECTION CONTENT -->
-            <div class="section-content ">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-6 col-lg-4 ">
-                            <div class="thumbnail" style="height: 336px;">
-                                <div class="caption">
-                                    <h3>
-                                        <a onclick="_hmt.push(['_trackEvent', 'tile', 'click', 'codeguide'])" target="_blank" title="Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。" href="http://codeguide.bootcss.com">
-                                            Bootstrap 编码规范
-                                            <br>
-                                            <small>by @mdo</small>
-                                        </a>
-                                    </h3>
-                                    <p> Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。 </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-4 ">
-                            <div class="thumbnail" style="height: 336px;">
-                                <div class="caption">
-                                    <h3>
-                                        <a onclick="_hmt.push(['_trackEvent', 'tile', 'click', 'codeguide'])" target="_blank" title="Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。" href="http://codeguide.bootcss.com">
-                                            Bootstrap 编码规范
-                                            <br>
-                                            <small>by @mdo</small>
-                                        </a>
-                                    </h3>
-                                    <p> Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。 </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-4 ">
-                            <div class="thumbnail" style="height: 336px;">
-                                <div class="caption">
-                                    <h3>
-                                        <a onclick="_hmt.push(['_trackEvent', 'tile', 'click', 'codeguide'])" target="_blank" title="Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。" href="http://codeguide.bootcss.com">
-                                            Bootstrap 编码规范
-                                            <br>
-                                            <small>by @mdo</small>
-                                        </a>
-                                    </h3>
-                                    <p> Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。 </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-4 ">
-                            <div class="thumbnail" style="height: 336px;">
-                                <div class="caption">
-                                    <h3>
-                                        <a onclick="_hmt.push(['_trackEvent', 'tile', 'click', 'codeguide'])" target="_blank" title="Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。" href="http://codeguide.bootcss.com">
-                                            Bootstrap 编码规范
-                                            <br>
-                                            <small>by @mdo</small>
-                                        </a>
-                                    </h3>
-                                    <p> Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。 </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-4 ">
-                            <div class="thumbnail" style="height: 336px;">
-                                <div class="caption">
-                                    <h3>
-                                        <a onclick="_hmt.push(['_trackEvent', 'tile', 'click', 'codeguide'])" target="_blank" title="Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。" href="http://codeguide.bootcss.com">
-                                            Bootstrap 编码规范
-                                            <br>
-                                            <small>by @mdo</small>
-                                        </a>
-                                    </h3>
-                                    <p> Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。 </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-4 ">
-                            <div class="thumbnail" style="height: 336px;">
-                                <div class="caption">
-                                    <h3>
-                                        <a onclick="_hmt.push(['_trackEvent', 'tile', 'click', 'codeguide'])" target="_blank" title="Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。" href="http://codeguide.bootcss.com">
-                                            Bootstrap 编码规范
-                                            <br>
-                                            <small>by @mdo</small>
-                                        </a>
-                                    </h3>
-                                    <p> Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。 </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-4 ">
-                            <div class="thumbnail" style="height: 336px;">
-                                <div class="caption">
-                                    <h3>
-                                        <a onclick="_hmt.push(['_trackEvent', 'tile', 'click', 'codeguide'])" target="_blank" title="Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。" href="http://codeguide.bootcss.com">
-                                            Bootstrap 编码规范
-                                            <br>
-                                            <small>by @mdo</small>
-                                        </a>
-                                    </h3>
-                                    <p> Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。 </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-4 ">
-                            <div class="thumbnail" style="height: 336px;">
-                                <div class="caption">
-                                    <h3>
-                                        <a onclick="_hmt.push(['_trackEvent', 'tile', 'click', 'codeguide'])" target="_blank" title="Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。" href="http://codeguide.bootcss.com">
-                                            Bootstrap 编码规范
-                                            <br>
-                                            <small>by @mdo</small>
-                                        </a>
-                                    </h3>
-                                    <p> Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。 </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="center ">
-                        <button type="button" class="btn btn-primary">更多</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- END BLOG SECTION -->
-
-        <!-- START CONTACT SECTION -->
-        <section id="about" class="section with-arrow section-full-colored ">
-            <!-- SECTION TITLE -->
-            <div class="section-header ">
-                <h1>The Family</h1>
-                <hr>
-            </div>
-            <!-- SECTION CONTENT -->
-            <div class="section-content">
-                <div class="container">
-                    <div class="center row">
-                        <div class="col-sm-6 col-md-4 col-lg-3 ">
-                            <img src="${ctx}/static/images/6.jpg"
-                                 class="center img-circle" alt="皮">
-                            <h3>皮</h3>
-                            <p>介绍 Few words about the creation, the ideas, biography of the funder...</p>
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 ">
-                            <img src="${ctx}/static/images/6.jpg"
-                                 class="center img-circle" alt="点点(Myron)">
-                            <h3>点点(Myron)</h3>
-                            <p>介绍 Few words about the creation, the ideas, biography of the funder...</p>
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 ">
-                            <img src="${ctx}/static/images/6.jpg"
-                                 class="center img-circle" alt="小驴">
-                            <h3>小驴</h3>
-                            <p>介绍 Few words about the creation, the ideas, biography of the funder...</p>
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 ">
-                            <img src="${ctx}/static/images/6.jpg"
-                                 class="center img-circle" alt="晓春">
-                            <h3>晓春</h3>
-                            <p>介绍 Few words about the creation, the ideas, biography of the funder...</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- END CONTACT SECTION -->
-
-        <!-- START FOOTER SECTION -->
-        <section id="footer" class="section section-content-colored color2">
-            <div class="section-content center ">
-                <p>晓春家 - Design &amp; Development by zcc &amp; lv</p>
-            </div>
-        </section>
-        <!-- END FOOTER SECTION -->
-
+        </div>
     </div>
-    <!-- END MAIN CONTAINER -->
-
-    <!-- PAGE LOADING-->
-    <div style="display: none;" id="loader">loading……</div>
 </div>
-<!-- SCRIPTS -->
-<script src="${ctx}/static/juntos/jquery.js"></script>
-<script src="${ctx}/static/juntos/alert.js"></script>
-<script src="${ctx}/static/juntos/jquery.fancybox.min.js"></script>
-<script src="${ctx}/static/juntos/jquery.flexslider.min.js"></script>
-<script src="${ctx}/static/juntos/jquery.meanmenu.min.js"></script>
-<script src="${ctx}/static/juntos/jquery.scrollup.min.js"></script>
-<script src="${ctx}/static/juntos/jquery.sequence.min.js"></script>
-<script src="${ctx}/static/juntos/jquery.isotope.js"></script>
-<script src="${ctx}/static/juntos/jquery.smoothscroll.min.js"></script>
-<script src="${ctx}/static/juntos/pace.js"></script>
-<script src="${ctx}/static/juntos/jquery.sticky.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        loadHImages();
+
+<footer class="footer">
+    <div class="container">
+        版权所有 © 晓春家 京ICP备15042864号-1
+    </div>
+</footer>
+
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="${ctx}/static/jquery/scrollpagination.js"></script>
+<script>
+    $(function () {
+        loadBlogs();
+
+        //栏目导航控制
+        var $window = $(window)
+        // side bar
+        setTimeout(function () {
+            $('.bs-docs-sidenav').affix({
+                offset: {
+                    top: function () {
+                        return $window.width() <= 980 ? 290 : 430
+                    }
+                    , bottom: 490
+                }
+            })
+        }, 100)
+        var page=2;
+        //无限滚动
+        $('#data').scrollPagination({
+            'contentPage': '${ctx}/blog/c',
+            'contentData': {page:page},
+            'scrollTarget': $(window),
+            'heightOffset': 10,
+            'beforeLoad': function () {
+                $('#loading').fadeIn();
+            },
+            'afterLoad': function (elementsLoaded) {
+                $('#loading').fadeOut();
+            },
+            'dataType': 'json',
+            'loader': function (data) {
+                if (data.length == 0) {
+                    $('#data').stopScrollPagination();
+                }
+                else {
+                    page++;
+                    this.contentData.page = page;
+                    appendBlogs(data);
+                }
+            }
+        });
     });
-    function loadHImages() {
-        $.ajax({
-            url: "${ctx}/himage/all",
-            success: function (data, textStatus) {
-                var images = JSON.parse(data);
-                $.each(images, function (i, image) {
-                    var imageStr = '<li style="background-image: url('${ctx}+image.url
-                            +'); display: list-item; z-index: 1;"><div style="" class="slide-content"><h1>'+image.title+
-                            '</h1><h3>'+image.description+'</h3></div></li>';
-                    $("#himage").append(imageStr);
-                });
-                loadBabyTimes();
-            },
-            error: function (r, s, e) {
-                loadBabyTimes();
-            }
-        });
-    }
-    function loadBabyTimes(){
-        $.ajax({
-            url: "${ctx}/baby/top",
-            success: function (data, textStatus) {
-                var bts = JSON.parse(data);
-                $.each(bts, function (i, bt) {
-                     var btStr = '<div class="row show-grid"><div class="col-lg-2 col-md-2 col-sm-2"><img src="'${ctx}+bt.imageUrl
-                            +'" class="img-thumbnail" alt="'+bt.title+'"></div><div class="col-lg-10 col-md-10 col-sm-10"><h3>'
-                            +bt.title+'</h3><p>'+bt.description+'</p></div></div>';
-                    $("#babyTime").append(btStr);
-                });
-                $("#babyTime").append('<button type="button" class="btn btn-primary">更多</button>');
-                loadFoods();
-            },
-            error: function (r, s, e) {
-                loadFoods();
-            }
-        });
-    }
-    function loadFoods() {
-        $.ajax({
-            url: "${ctx}/food/top",
-            success: function (data, textStatus) {
-                var foods = JSON.parse(data);
-                $.each(foods, function (i, food) {
-                    var foodStr = '<div class="row show-grid"><div class="col-lg-2 col-md-2 col-sm-2"><img src="'${ctx}+food.imageUrl
-                            +'" class="img-thumbnail" alt="'+food.title+'"></div><div class="col-lg-10 col-md-10 col-sm-10"><h3>'
-                            +food.title+'</h3><p>'+food.description+'</p></div></div>';
-                    $("#foodContainer").append(foodStr);
-                });
-                $("#foodContainer").append('<button type="button" class="btn btn-primary">更多</button>');
-                loadPhotos();
-            },
-            error: function (r, s, e) {
-                loadPhotos();
-            }
-        });
-    }
-    function loadPhotos() {
-        //return;
-        $.ajax({
-            url: "${ctx}/photo/all",
-            success: function (data, textStatus) {
-                var photos = JSON.parse(data);
-                $.each(photos, function (i, photo) {
-                    var photoStr = '<div class="element"><a class="fancybox" data-fancybox-group="group1" href="'${ctx}
-                            +photo.url+'"><img src="'${ctx}+photo.thumbnail+'" alt=""/><span class="image-info"><span class="image-title">'
-                            +photo.title+'</span><span class="image-desc">'+photo.description+'</span></span></a></div>';
-                    $("#portfolio-one").append(photoStr);
-                });
-                setTimeout(function (){
-                    isotope(); // Initilize isotope
-                    $(window).smartresize(function(){
-                        isotope(); // Call isotope when resize
-                    });
-                }, 100);
-                loadBlogs();
-            },
-            error: function (r, s, e) {
-                loadBlogs();
-            }
-        });
-    }
     function loadBlogs() {
-        
+        $.ajax({
+            url: "${ctx}/blog/c?page=1",
+            success: function (data, textStatus) {
+                var bolgs = JSON.parse(data);
+                appendBlogs(bolgs);
+            },
+            error: function (r, s, e) {
+                //document.location = "${ctx}/error/500";
+            }
+        });
+    }
+    function appendBlogs(blogs) {
+        $.each(blogs, function (i, blog) {
+            var blogDiv = $('<div class="blog-list"></div>');
+            var title = $('<h3 class="bTitle"><a href="#">'+blog.title+'</a></h3>');
+            var contnet=null;
+            var detail=$('<p class="text-right span2"><a >阅读原文</a></p>');
+            if(blog.type==0){
+                contnet = $('<div>'+blog.dspText+'</div>');
+            }
+            else if(blog.type==1){
+                contnet = $('<div class="row-fluid"></div>');
+                var thumbnails = $('<ul class="thumbnails">');
+                $.each(blog.dspImage.split(','), function (i, img) {
+                    var li = $('<li class="span4"><a class="thumbnail" ><img alt="260x180" data-src="holder.js/260x180" style="width: 260px; height: 180px;" src="'+img+'"></a></li>');
+                    thumbnails.append(li);
+                });
+                contnet.append(thumbnails);
+            }
+            else if(blog.type==2){
+                contnet = $('<div class="row-fluid"></div>');
+                var thumbnails = $('<ul class="thumbnails">');
+                var li = $('<li class="span4"><a class="thumbnail" ><img alt="260x180" data-src="holder.js/260x180" style="width: 260px; height: 180px;" src="'+blog.dspImage+'"></a></li>');
+                thumbnails.append(li);
+                thumbnails.append($('<li class="span8"><p>'+blog.dspText+'</p></li>'));
+                contnet.append(thumbnails);
+            }
+            var opt = $('<div class="row-fluid opt"><p class="span10 "><i class="icon-time"></i>'+new Date(blog.date).format("yyyy-MM-dd")+'</p></div>');
+            opt.append(detail);
+            blogDiv.append(title);
+            blogDiv.append(contnet);
+            blogDiv.append(opt);
+            $("#data").append(blogDiv);
+        });
     }
 </script>
-<script src="${ctx}/static/juntos/custom.js"></script>
-<a style="position: fixed; z-index: 2147483647; display: none;" title="Top" href="#top" id="scrollUp">Top</a>
-
-</body><!-- END BODY --></html>
+</body>
+</html>

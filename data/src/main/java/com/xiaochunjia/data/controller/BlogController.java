@@ -5,10 +5,7 @@ import com.xiaochunjia.data.model.Blog;
 import com.xiaochunjia.data.service.BlogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
@@ -28,15 +25,15 @@ public class BlogController {
 	@Autowired
 	private BlogService blogService;
 	
-	@RequestMapping(value = "/{category}/{page}",method=RequestMethod.GET)
+	@RequestMapping(value = "/list/{category}",method=RequestMethod.GET)
 	@ResponseBody()
-	public List<Blog> getBlog(HttpSession session,@PathVariable int page,@PathVariable String category) {
+	public List<Blog> getBlog(HttpSession session,@PathVariable String category,@RequestParam Integer page) {
 		
 		System.out.println("category:"+category);
 		System.out.println("Level:"+SessionUtils.getSessionLevel(session.hashCode()));
 		return blogService.findByPage(page, 5);
 	}
-	
+
 	@RequestMapping(value = "/m",method=RequestMethod.GET)
 	public ModelAndView manager() {
 		return new ModelAndView("/blog/blog");

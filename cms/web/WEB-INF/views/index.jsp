@@ -100,7 +100,7 @@
         $.ajax({
             url: "${ctx}/blog/" + c + "/" + page,
             success: function (data, textStatus) {
-                var bolgs = JSON.parse(data);
+                var bolgs = JSON.parse(data.replace(new RegExp("\r\n","gm"),""));
                 appendBlogs(bolgs);
             },
             error: function (r, s, e) {

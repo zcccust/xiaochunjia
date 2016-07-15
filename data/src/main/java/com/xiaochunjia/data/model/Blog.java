@@ -14,19 +14,22 @@ public class Blog extends BaseEntity{
 	public static Integer K_Level_Open = 0;			//完全公开
 	public static Integer K_Level_Verify = 1;		//验证访问
 	public static Integer K_Level_Secret = 2;		//完全保密
-	
+
+	private Integer category;		//栏目
 	private String title;		//标题
 	private Date date;			//创建时间
 	private String content;		//内容
 	private Integer status;		//状态  1：上线  0：下线
 	private Integer type;		//类型   0：文字  1：图片 2图文混合
 	private String dspText;		//文字摘要，一段简介
-	private String dspImage;	//图片摘要，1到n个图片
+	private String dspImage;	//图片摘要，1或3个图片，多个直接使用英文逗号分隔
 	private Integer level;		//安全等级   0：完全公开   1：验证访问
 	private String tags;		//标签
 	private Integer mark;		//赞数
 	private Integer comment;	//评论数
 
+	public Integer getCategory() { return category;	}
+	public void setCategory(Integer category) {	this.category = category;}
 	public String getTitle() {
 		return title;
 	}
