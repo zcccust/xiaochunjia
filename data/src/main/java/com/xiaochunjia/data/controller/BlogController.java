@@ -3,6 +3,7 @@ package com.xiaochunjia.data.controller;
 import com.xiaochunjia.data.common.SessionUtils;
 import com.xiaochunjia.data.model.Blog;
 import com.xiaochunjia.data.service.BlogService;
+import com.xiaochunjia.data.view.BlogView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -130,7 +131,7 @@ public class BlogController {
 	public ModelAndView show(HttpSession session,@PathVariable Long id) {
 		Blog blog = blogService.find(id);
 		Map<String,Object> data = new HashMap<String,Object>();
-		data.put("blog",blog);
+		data.put("blog",new BlogView(blog));
 		return new ModelAndView("/blog/view",data);
 	}
 }
