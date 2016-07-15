@@ -15,7 +15,7 @@ public class Blog extends BaseEntity{
 	public static Integer K_Level_Verify = 1;		//验证访问
 	public static Integer K_Level_Secret = 2;		//完全保密
 
-	private Integer category;		//栏目
+	private Integer category;	//栏目
 	private String title;		//标题
 	private Date date;			//创建时间
 	private String content;		//内容
