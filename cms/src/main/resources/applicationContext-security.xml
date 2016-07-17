@@ -15,7 +15,7 @@
         <!-- 允许访问的uri -->
         <intercept-url pattern="/**" access="ROLE_USER"/>
         <!-- 登陆页面配置 -->
-        <form-login login-page="/login.jsp" default-target-url="/WEB-INF/views/index.jsp" authentication-failure-url="/login.jsp?error=true"/>
+        <form-login login-page="/login.jsp" default-target-url="/user/login" authentication-failure-url="/login.jsp?error=true"/>
     </http>
     <!-- 权限管理者 -->
     <authentication-manager>

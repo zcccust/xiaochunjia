@@ -66,7 +66,7 @@ public class UserController {
 
 	@RequestMapping(value = "/login",method=RequestMethod.GET)
 	public ModelAndView show(HttpSession session) {
-		return new ModelAndView("/login");
+		return new ModelAndView("index");
 	}
 	
 	@RequestMapping(value = "/questions",method=RequestMethod.GET)
