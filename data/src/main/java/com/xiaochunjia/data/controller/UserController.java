@@ -7,14 +7,19 @@ import com.xiaochunjia.data.model.User;
 import com.xiaochunjia.data.service.BlogService;
 import com.xiaochunjia.data.service.QuestionService;
 import com.xiaochunjia.data.service.UserService;
+import com.xiaochunjia.data.view.BlogView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping(value = "/user")
@@ -42,7 +47,8 @@ public class UserController {
 			return new CheckResult(false,"答案不正确");
 		}
 	}
-	
+
+	/*
 	@RequestMapping(value = "/login",method=RequestMethod.POST)
 	@ResponseBody
 	public CheckResult login(HttpSession session,String pwd) {
@@ -55,6 +61,12 @@ public class UserController {
 		else{
 			return new CheckResult(false,"密码不正确");
 		}
+	}
+	*/
+
+	@RequestMapping(value = "/login",method=RequestMethod.GET)
+	public ModelAndView show(HttpSession session) {
+		return new ModelAndView("/login");
 	}
 	
 	@RequestMapping(value = "/questions",method=RequestMethod.GET)

@@ -29,7 +29,8 @@ public class BlogController {
 	@RequestMapping(value = "/list/{category}",method=RequestMethod.GET)
 	@ResponseBody()
 	public List<Blog> getBlog(HttpSession session,@PathVariable String category,@RequestParam Integer page) {
-		
+
+
 		System.out.println("category:"+category);
 		System.out.println("Level:"+SessionUtils.getSessionLevel(session.hashCode()));
 		return blogService.findByPage(page, 5);
@@ -124,7 +125,7 @@ public class BlogController {
 		blog.setComment(0);
 		System.out.print(blog.toString());
 		blogService.addBlog(blog);
-		return new ModelAndView("/index");
+		return new ModelAndView("index");
 	}
 
 	@RequestMapping(value = "/{id}",method=RequestMethod.GET)
