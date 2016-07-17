@@ -8,6 +8,7 @@
          http://www.springframework.org/schema/security/spring-security-3.2.xsd">
 
     <!-- spring securit 3.X新的资源放行配置方式，不受保护的资源 -->
+    <http pattern="/static/**" security="none"/>
     <http pattern="/login.jsp" security="none"/>
     <!-- 开启默认的拦截器 -->
     <http auto-config='true'>
