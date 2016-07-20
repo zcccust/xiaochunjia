@@ -35,6 +35,16 @@ public class BlogView {
         }else if(category==6){
             categoryDesc="Wiki";
         }
+
+        if(blog.getType().equals(0)){
+            typeDesc="文字";
+        }
+        else if(blog.getType().equals(1)){
+            typeDesc="图片";
+        }
+        else if(blog.getType().equals(2)){
+            typeDesc="图文混合";
+        }
     }
 
     private Long id;             //id
@@ -46,6 +56,7 @@ public class BlogView {
     private String tags;		    //标签
     private Integer mark;		    //赞数
     private Integer comment;	    //评论数
+    private String typeDesc;        //类型
 
     public Long getId() {return id;}
     public String getCategoryDesc() {return categoryDesc;}
@@ -68,4 +79,5 @@ public class BlogView {
     public Integer getComment() {
         return comment;
     }
+    public String getTypeDesc(){return typeDesc;}
 }

@@ -7,7 +7,7 @@
 		where isDelete=0;
 	</select>
 	<select id="findByPage" resultType="com.xiaochunjia.data.model.Blog">
-		SELECT id,title,dspText,date,dspImage,type
+		SELECT id,title,dspText,date,dspImage,type,category
 		FROM blog
 		WHERE isDelete=0
 		ORDER By date desc

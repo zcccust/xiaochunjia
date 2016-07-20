@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -66,9 +67,16 @@ public class UserController {
 
 	@RequestMapping(value = "/login",method=RequestMethod.GET)
 	public ModelAndView show(HttpSession session) {
-		return new ModelAndView("index");
+		List<Blog> blogs = blogService.findByPage(0,10);
+		List<BlogView> blogViews = new ArrayList<BlogView>();
+		for(Blog blog:blogs){
+			blogViews.add(new BlogView(blog));
+		}
+		System.out.print(blogViews.size());
+		return new ModelAndView("/index","blogs",blogViews);
 	}
-	
+
+
 	@RequestMapping(value = "/questions",method=RequestMethod.GET)
 	@ResponseBody
 	public List<Question> getQuestions() {	
