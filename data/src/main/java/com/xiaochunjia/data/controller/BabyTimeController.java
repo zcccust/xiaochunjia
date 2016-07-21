@@ -1,7 +1,7 @@
 package com.xiaochunjia.data.controller;
 
-import com.xiaochunjia.data.model.BabyTime;
-import com.xiaochunjia.data.service.BabyTimeService;
+import com.xiaochunjia.data.model.Dictionary;
+import com.xiaochunjia.data.service.DictionaryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,11 +19,11 @@ import java.util.List;
 @RequestMapping(value = "/baby")
 public class BabyTimeController {
     @Autowired
-    private BabyTimeService babyTimeService;
+    private DictionaryService babyTimeService;
 
     @RequestMapping(value = "/top",method= RequestMethod.GET)
     @ResponseBody()
-    public List<BabyTime> getTop(HttpSession session) {
+    public List<Dictionary> getTop(HttpSession session) {
         return babyTimeService.findByPage(0,5);
     }
 }

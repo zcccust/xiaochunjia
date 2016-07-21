@@ -1,8 +1,10 @@
 package com.xiaochunjia.data.controller;
 
 import com.xiaochunjia.data.common.SessionUtils;
-import com.xiaochunjia.data.model.Blog;
+import com.xiaochunjia.data.model.*;
+import com.xiaochunjia.data.model.Dictionary;
 import com.xiaochunjia.data.service.BlogService;
+import com.xiaochunjia.data.service.DictionaryService;
 import com.xiaochunjia.data.view.BlogView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,6 +27,9 @@ public class BlogController {
 	
 	@Autowired
 	private BlogService blogService;
+
+	@Autowired
+	private DictionaryService dictionaryService;
 	
 	@RequestMapping(value = "/list/{category}",method=RequestMethod.GET)
 	@ResponseBody()
@@ -129,10 +134,28 @@ public class BlogController {
 	}
 
 	@RequestMapping(value = "/{id}",method=RequestMethod.GET)
-	public ModelAndView show(HttpSession session,@PathVariable Long id) {
+	public ModelAndView show(@PathVariable Long id) {
 		Blog blog = blogService.find(id);
 		Map<String,Object> data = new HashMap<String,Object>();
 		data.put("blog",new BlogView(blog));
 		return new ModelAndView("/blog/view",data);
+	}
+
+	@RequestMapping(value = "/edit/{id}",method=RequestMethod.GET)
+	public ModelAndView toEdit(@PathVariable Long id) {
+
+		List<Dictionary> categorys = dictionaryService.findByType(Dictionary.k_Type_Cagegory);
+
+		Map<String,Object> data = new HashMap<String,Object>();
+		data.put("categorys",categorys);
+
+		if(id==0){
+			return new ModelAndView("/blog/add",data);
+		}
+		else {
+			Blog blog = blogService.find(id);
+			data.put("blog",blog);
+			return new ModelAndView("/blog/edit",data);
+		}
 	}
 }

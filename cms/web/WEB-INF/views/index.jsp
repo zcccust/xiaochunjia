@@ -13,7 +13,6 @@
     <meta content="xiaochunjia.com" name="application-name">
     <link href="/static/images/baby_bottle.png" rel="shortcut icon">
     <link href="${ctx}/static/css/bootstrap-spacelab.min.css" rel="stylesheet" type="text/css">
-    <link href="${ctx}/static/css/bootstrap-cerulean.min.css.css" rel="stylesheet" type="text/css">
     <link href="${ctx}/static/css/charisma-app.css" rel="stylesheet" type="text/css">
 </head>
 </head>
@@ -97,7 +96,7 @@
                         <div class="box-header well" data-original-title="">
                             <h2><i class="glyphicon glyphicon-folder-open"></i> 全部文章</h2>
                             <div class="box-icon">
-                                <a class="btn btn-setting btn-round btn-default" href="#">
+                                <a class="btn btn-setting btn-round btn-default" href="${ctx}/blog/edit/0">
                                     <i class=" glyphicon glyphicon-plus"></i>
                                 </a>
                             </div>
@@ -116,26 +115,26 @@
                                 </thead>
                                 <tbody>
                                 <c:forEach var="blog" items="${blogs}" varStatus="status">
-                                <tr>
-                                    <td>${blog.title}</td>
-                                    <td class="center"><fmt:formatDate value="${blog.date}"  type="both" /></td>
-                                    <td class="center">${blog.categoryDesc}</td>
-                                    <td class="center">${blog.typeDesc}</td>
-                                    <td class="center">
-                                        <a class="btn btn-success" href="#">
-                                            <i class="glyphicon glyphicon-zoom-in icon-white"></i>
-                                            View
-                                        </a>
-                                        <a class="btn btn-info" href="#">
-                                            <i class="glyphicon glyphicon-edit icon-white"></i>
-                                            Edit
-                                        </a>
-                                        <a class="btn btn-danger" href="#">
-                                            <i class="glyphicon glyphicon-trash icon-white"></i>
-                                            Delete
-                                        </a>
-                                    </td>
-                                </tr>
+                                    <tr>
+                                        <td>${blog.title}</td>
+                                        <td class="center"><fmt:formatDate value="${blog.date}" type="both"/></td>
+                                        <td class="center">${blog.categoryDesc}</td>
+                                        <td class="center">${blog.typeDesc}</td>
+                                        <td class="center">
+                                            <a class="btn btn-success" href="#">
+                                                <i class="glyphicon glyphicon-zoom-in icon-white"></i>
+                                                View
+                                            </a>
+                                            <a class="btn btn-info" href="${ctx}/blog/edit/${blog.id}">
+                                                <i class="glyphicon glyphicon-edit icon-white"></i>
+                                                Edit
+                                            </a>
+                                            <a class="btn btn-danger" href="#">
+                                                <i class="glyphicon glyphicon-trash icon-white"></i>
+                                                Delete
+                                            </a>
+                                        </td>
+                                    </tr>
                                 </c:forEach>
                                 </tbody>
                             </table>
@@ -146,7 +145,6 @@
                 <!--/span-->
 
             </div><!--/row-->
-
 
 
             <!-- content ends -->
@@ -171,38 +169,5 @@
 <![endif]-->
 
 <script src="http://cdn.bootcss.com/bootstrap/2.3.2/js/bootstrap.min.js"></script>
-
-<!-- library for cookie management -->
-<script src="js/jquery.cookie.js"></script>
-<!-- calender plugin -->
-<script src='bower_components/moment/min/moment.min.js'></script>
-<script src='bower_components/fullcalendar/dist/fullcalendar.min.js'></script>
-<!-- data table plugin -->
-<script src='js/jquery.dataTables.min.js'></script>
-
-<!-- select or dropdown enhancer -->
-<script src="bower_components/chosen/chosen.jquery.min.js"></script>
-<!-- plugin for gallery image view -->
-<script src="bower_components/colorbox/jquery.colorbox-min.js"></script>
-<!-- notification plugin -->
-<script src="js/jquery.noty.js"></script>
-<!-- library for making tables responsive -->
-<script src="bower_components/responsive-tables/responsive-tables.js"></script>
-<!-- tour plugin -->
-<script src="bower_components/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
-<!-- star rating plugin -->
-<script src="js/jquery.raty.min.js"></script>
-<!-- for iOS style toggle switch -->
-<script src="js/jquery.iphone.toggle.js"></script>
-<!-- autogrowing textarea plugin -->
-<script src="js/jquery.autogrow-textarea.js"></script>
-<!-- multiple file upload plugin -->
-<script src="js/jquery.uploadify-3.1.min.js"></script>
-<!-- history.js for cross-browser state change on ajax -->
-<script src="js/jquery.history.js"></script>
-<!-- application script for Charisma demo -->
-<script src="js/charisma.js"></script>
-
-
 </body>
 </html>
