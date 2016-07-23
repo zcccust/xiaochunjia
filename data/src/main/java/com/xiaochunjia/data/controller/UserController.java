@@ -21,11 +21,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import org.apache.log4j.Logger;
 
 @Controller
 @RequestMapping(value = "/user")
 public class UserController {
-	
+	private static Logger logger = Logger.getLogger(UserController.class);
 	@Autowired
 	private BlogService blogService;
 	
@@ -70,7 +71,12 @@ public class UserController {
 		List<Blog> blogs = blogService.findByPage(0,10);
 		List<BlogView> blogViews = new ArrayList<BlogView>();
 		for(Blog blog:blogs){
-			blogViews.add(new BlogView(blog));
+			try {
+				blogViews.add(new BlogView(blog));
+			}
+			catch (Exception ee){
+				logger.error(ee.getMessage(),ee);
+			}
 		}
 		System.out.print(blogViews.size());
 		return new ModelAndView("/index","blogs",blogViews);

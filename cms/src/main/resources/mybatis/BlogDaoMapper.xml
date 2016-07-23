@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaochunjia.data.dao.BlogDao">
+	<select id="findAll" resultType="int">
+		select * c
+		from blog
+		where isDelete=0;
+	</select>
+	<select id="findByPage" resultType="com.xiaochunjia.data.model.Blog">
+		SELECT id,title,dspText,date,dspImage,type,category
+		FROM blog
+		WHERE isDelete=0
+		ORDER By date desc
+		LIMIT #{0},#{1}		
+	</select>
+
+	<select id="get" resultType="com.xiaochunjia.data.model.Blog">
+		SELECT *
+		FROM blog
+		WHERE id=#{0}
+	</select>
+
+	<insert id="add" parameterType="com.xiaochunjia.data.model.Blog"
+			useGeneratedKeys="true" keyProperty="id">
+		insert into blog(title,date,content,status,type,dspText,dspImage,level,tags,mark,comment,category)
+		values(#{title},#{date},#{content},#{status},#{type},#{dspText},#{dspImage},#{level},#{tags},#{mark},#{comment},#{category})
+	</insert>
+
+	<update id="delete">
+		update blog
+		set isDelete=1
+		where id = #{0}
+	</update>
+
+</mapper>

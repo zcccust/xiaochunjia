@@ -18,21 +18,22 @@ public class BlogView {
         this.tags = blog.getTags();
         this.mark = blog.getMark();
         this.comment = blog.getComment();
-        if(category==0){
+        //TODO 字典数据使用缓存管理尝试使用 redis 或 memcached
+        if(category==1){
             categoryDesc="亲子";
         }
-        else if(category==1){
+        else if(category==2){
             categoryDesc="旅行";
         }
-        else if(category==2){
+        else if(category==3){
             categoryDesc="美食";
-        }else if(category==3){
-            categoryDesc="烘焙";
         }else if(category==4){
-            categoryDesc="摄影";
+            categoryDesc="烘焙";
         }else if(category==5){
-            categoryDesc="读书";
+            categoryDesc="摄影";
         }else if(category==6){
+            categoryDesc="读书";
+        }else if(category==7){
             categoryDesc="Wiki";
         }
 

@@ -58,7 +58,7 @@ function loadImage(month){
 function loadImages(images,a){
 	$("#imgs").html("");
 	$.each(images, function(i,image){
-		var imageStr = '<a href="#" onclick="imageClick(this)"><img src="../static/pic/'+a+'/'+image+'" width="100" height="100" ><input class="checkbox" type="checkbox" url="../static/pic/'+a+'/'+image+'"></a>';
+		var imageStr = '<a href="#" onclick="imageClick(this)"><img src="../../static/pic/'+a+'/'+image+'" width="100" height="100" ><input class="checkbox" type="checkbox" url="../../static/pic/'+a+'/'+image+'"></a>';
 		$("#imgs").append(imageStr); 
 	});	
 }

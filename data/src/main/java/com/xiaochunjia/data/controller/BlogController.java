@@ -123,14 +123,14 @@ public class BlogController {
 	}
 
 	@RequestMapping(value = "/save",method=RequestMethod.POST)
-	public ModelAndView save(Blog blog) {
+	public String save(Blog blog) {
 		blog.setDate(new Date());
 		blog.setStatus(Blog.K_Status_Online);
 		blog.setMark(0);
 		blog.setComment(0);
 		System.out.print(blog.toString());
 		blogService.addBlog(blog);
-		return new ModelAndView("index");
+		return "redirect:/user/login";
 	}
 
 	@RequestMapping(value = "/{id}",method=RequestMethod.GET)

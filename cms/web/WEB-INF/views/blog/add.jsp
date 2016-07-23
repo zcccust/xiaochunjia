@@ -200,7 +200,7 @@
                 // Open window
                 editor.windowManager.open({
                     title: 'My html dialog',
-                    url: '${ctx}/static/imageManager.html',
+                    url: '${ctx}/html/imageManager.html',
                     width: 900,
                     height: 400,
                     resizable: 'yes',
@@ -243,7 +243,7 @@
     function chooseImage(a) {
         top.tinymce.activeEditor.windowManager.open({
             title: 'My html dialog',
-            url: '${ctx}/static/imageManager.html',
+            url: '${ctx}/html/imageManager.html',
             width: 900,
             height: 400,
             resizable: 'yes',

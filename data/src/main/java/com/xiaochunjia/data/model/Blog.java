@@ -111,6 +111,7 @@ public class Blog extends BaseEntity{
 				", tags='" + tags + '\'' +
 				", mark=" + mark +
 				", comment=" + comment +
+				", category=" + category +
 				'}';
 	}
 }

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaochunjia.data.dao.DictionaryDao">
+	<select id="findAll" resultType="com.xiaochunjia.data.model.Dictionary">
+		select * from dictionary where isDelete=0;
+	</select>
+	<select id="findByPage" resultType="com.xiaochunjia.data.model.Dictionary">
+		SELECT *
+		FROM dictionary
+		WHERE isDelete=0
+		ORDER BY publishDate DESC
+		LIMIT #{0},#{1}
+	</select>
+	<select id="get" resultType="com.xiaochunjia.data.model.Dictionary">
+		SELECT *
+		FROM dictionary
+		WHERE id=#{0}
+	</select>
+	<insert id="add" parameterType="com.xiaochunjia.data.model.Dictionary"
+			useGeneratedKeys="true" keyProperty="id">
+		insert into dictionary(title,type,no)
+		values(#{title},#{type},#{no})
+	</insert>
+	<update id="delete">
+		update babytime
+		set isDelete=1
+		where id = #{0}
+	</update>
+	<select id="findByType" resultType="com.xiaochunjia.data.model.Dictionary">
+		SELECT *
+		FROM dictionary
+		WHERE type=#{0}
+		ORDER BY no
+	</select>
+</mapper>
